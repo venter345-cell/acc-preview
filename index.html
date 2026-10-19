@@ -189,6 +189,19 @@ textarea{min-height:96px;resize:vertical}
 .promise{display:grid;gap:14px;margin-top:28px}
 .promise div{display:flex;gap:12px;align-items:flex-start;color:#c4cddd}
 .promise svg{flex:none;width:22px;height:22px;color:var(--mint);margin-top:2px}
+.contact{padding:30px}
+.ct-h{font-family:var(--serif);font-size:26px;font-weight:600}
+.ct-sub{color:var(--muted);font-size:15px;margin:4px 0 20px}
+.ct{display:flex;align-items:center;gap:16px;padding:18px 18px;border-radius:16px;background:#0a1122;border:1px solid rgba(255,255,255,.1);margin-bottom:12px;transition:border-color .2s, transform .2s}
+.ct:hover{border-color:var(--gold);transform:translateY(-2px)}
+.ct .ci{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--gold);color:#1a1300;flex:none}
+.ct .ci.wa{background:#25d366;color:#05210f}
+.ct .ci.em{background:var(--sky);color:#04121f}
+.ct .ci svg{width:22px;height:22px}
+.ct small{display:block;color:var(--muted);font-size:12.5px;font-weight:600;letter-spacing:.8px;text-transform:uppercase}
+.ct b{font-size:17px;overflow-wrap:anywhere}
+@media (max-width:560px){.contact{padding:20px}.ct{padding:14px;gap:12px}.ct .ci{width:40px;height:40px}.ct b{font-size:15.5px}}
+.ct .arr{margin-left:auto;font-size:28px;color:var(--gold);line-height:1}
 footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:13.5px}
 .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 /* reveal */
@@ -260,7 +273,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
       <div class="cta-row rv d3">
         <a href="#book" class="btn btn-gold">Book a free growth audit
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a href="#aviation" class="btn btn-ghost">See it for an aviation medical practice</a>
+        <a href="https://wa.me/27823478094" target="_blank" rel="noopener" class="btn btn-ghost">WhatsApp Ruben</a>
       </div>
       <div class="trust rv d4">
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>One connected system</span>
@@ -408,7 +421,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
       <div class="prob rv d2"><div class="n">03</div><h3>No lead left behind</h3><p>Every call, form and message lands in one pipeline and gets followed up until it books or says no.</p></div>
       <div class="prob rv d3"><div class="n">04</div><h3>Clear sight of what works</h3><p>Every booking is tagged by where it came from, so you know which searches, ads and listings pay for themselves.</p></div>
     </div>
-    <div class="cta-row rv" style="justify-content:center;margin-top:44px"><a href="#book" class="btn btn-dark">Find my biggest leak</a></div>
+    <div class="cta-row rv" style="justify-content:center;margin-top:44px"><a href="#book" class="btn btn-dark">Find my biggest leak</a><a href="tel:+27823478094" class="btn btn-ghost" style="color:var(--paperInk);border-color:#d8d2c6">Call 082 347 8094</a></div>
   </div>
 </section>
 
@@ -440,30 +453,20 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
         <div class="rv d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12l5 5L20 7"/></svg><span>The three fixes that would make the biggest difference first</span></div>
       </div>
     </div>
-    <form class="card rv d1" id="leadForm" onsubmit="return false" novalidate>
-      <div class="f2">
-        <div><label for="n">Your name</label><input id="n" placeholder="Dr Jane Smith"></div>
-        <div><label for="p">Practice or business</label><input id="p" placeholder="Your practice name"></div>
-      </div>
-      <div class="f2">
-        <div><label for="e">Email</label><input id="e" type="email" placeholder="you@practice.com"></div>
-        <div><label for="t">Phone or WhatsApp</label><input id="t" placeholder="Best number"></div>
-      </div>
-      <label for="g">What matters most right now?</label>
-      <select id="g"><option>More bookings</option><option>Fewer no-shows</option><option>Being found on Google and AI</option><option>Following up every lead</option><option>All of the above</option></select>
-      <label for="m">Anything else we should know?</label>
-      <textarea id="m" placeholder="Where you are based, how people book with you today..."></textarea>
-      <button class="btn btn-gold" type="submit" style="width:100%;justify-content:center">Request my free audit</button>
-      <p class="formnote">Preview only. This form is not connected yet and does not send anything.</p>
-      <div class="formmsg" id="formMsg">Thanks. This is a preview, so nothing was sent. Once the page goes live, this form will reach the ACC team directly.</div>
-    </form>
+    <div class="card contact rv d1" id="contact">
+      <div class="ct-h">Talk to Ruben directly</div>
+      <p class="ct-sub">Call, WhatsApp or email. No forms, no call centre.</p>
+      <a class="ct" href="tel:+27823478094"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg></span><span><small>Call</small><b>082 347 8094</b></span><span class="arr">&rsaquo;</span></a>
+      <a class="ct" href="https://wa.me/27823478094" target="_blank" rel="noopener"><span class="ci wa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 01-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1121 11.5z"/></svg></span><span><small>WhatsApp</small><b>Send a message</b></span><span class="arr">&rsaquo;</span></a>
+      <a class="ct" href="mailto:Ruben@acreationc.com?subject=Free%20growth%20audit"><span class="ci em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></span><span><small>Email</small><b>Ruben@acreationc.com</b></span><span class="arr">&rsaquo;</span></a>
+    </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap foot">
     <span>Ads Creation Centre. Growth systems for practices and service businesses.</span>
-    <span>Preview build. Not indexed.</span>
+    <span><a href="tel:+27823478094">082 347 8094</a> &middot; <a href="mailto:Ruben@acreationc.com">Ruben@acreationc.com</a></span>
   </div>
 </footer>
 
@@ -501,8 +504,6 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
     var n=0; (function type(){ render(n); n++; if(n<=plain.length){ setTimeout(type, 28); } else { setTimeout(function(){ n=0; type(); }, 5000); } })();
   }
 
-  // placeholder form
-  document.getElementById('leadForm').addEventListener('submit', function(){ document.getElementById('formMsg').style.display='block'; });
 })();
 </script>
 </body>
