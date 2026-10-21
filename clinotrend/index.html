@@ -308,11 +308,26 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
 .logo img{height:56px;width:auto;border-radius:8px;box-shadow:0 4px 18px rgba(47,118,187,.35)}
 @media (max-width:560px){.logo img{height:48px}}
 .flogo{display:flex;align-items:center;gap:12px}.flogo img{width:36px;height:36px}
+
+.rocket{position:relative;display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;font-family:Lexend,Inter,sans-serif;font-weight:800;font-size:17px;letter-spacing:.06em;color:#0F2742!important;text-decoration:none;background:linear-gradient(135deg,#FFD84D,#FF9F1C 55%,#FF6B35);box-shadow:0 10px 30px rgba(255,140,40,.45),0 0 0 0 rgba(255,170,50,.7);animation:rkpulse 2s infinite;transition:transform .2s ease}
+.rocket .rk{display:inline-block;font-size:22px;transition:transform .35s ease}
+.rocket:hover{transform:translateY(-3px) scale(1.04)}
+.rocket:hover .rk{transform:translate(6px,-8px) rotate(-8deg)}
+.rocket.sm{padding:10px 18px;font-size:14px}.rocket.sm .rk{font-size:17px}
+.rocket.big{padding:20px 36px;font-size:20px;width:100%;justify-content:center;margin-top:20px}
+@keyframes rkpulse{0%{box-shadow:0 10px 30px rgba(255,140,40,.45),0 0 0 0 rgba(255,170,50,.7)}70%{box-shadow:0 10px 30px rgba(255,140,40,.45),0 0 0 16px rgba(255,170,50,0)}100%{box-shadow:0 10px 30px rgba(255,140,40,.45),0 0 0 0 rgba(255,170,50,0)}}
+.gobar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(15,39,66,.96);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.12);padding:12px 16px;display:flex;align-items:center;justify-content:center;gap:18px;transform:translateY(110%);transition:transform .35s ease}
+.gobar.show{transform:none}
+.gobar .gt{color:#fff;font-size:15px}.gobar .gt b{color:#FFD84D}
+body{padding-bottom:84px}
+.price-card .pay-note{font-size:13px;opacity:.8;margin-top:10px;text-align:center}
+@media (max-width:640px){.gobar .gt{display:none}.gobar .rocket{width:100%;justify-content:center}}
+@media (prefers-reduced-motion:reduce){.rocket{animation:none}}
 </style>
 </head>
 <body>
 
-<div class="preview">Private proposal preview for Dr A.O. Ndhlovu. This page is not live for search engines.</div>
+<div class="preview">Private proposal prepared for Dr A.O. Ndhlovu.</div>
 
 <nav>
   <div class="wrap nav">
@@ -324,7 +339,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
       <a href="#partners">Referral partners</a>
       <a href="#invest">Investment</a>
     </div>
-    <a href="#next" class="btn btn-gold">Talk to Ruben</a>
+    <a href="https://paystack.shop/pay/clinotrend" target="_blank" rel="noopener" class="rocket sm"><span class="rk">🚀</span><span>GET STARTED</span></a>
   </div>
 </nav>
 
@@ -336,8 +351,8 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
       <h1 class="rv d1">Dr Ndhlovu, your practice is already in the right place. <em>Let's make sure pilots can find it and book it.</em></h1>
       <p class="lead rv d2">You see pilots, cabin crew and companies from consulting rooms inside the Grand Central Airport terminal. This proposal shows how we would help more of them find Clinotrend online, book in a few taps, arrive on time and come back when their certificate is due.</p>
       <div class="cta-row rv d3">
-        <a href="#next" class="btn btn-gold">Talk it through with Ruben
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="https://paystack.shop/pay/clinotrend" target="_blank" rel="noopener" class="rocket"><span class="rk">🚀</span><span>GET STARTED</span></a>
+        <a href="#invest" class="btn btn-ghost">See what is included</a>
         <a href="https://wa.me/27823478094" target="_blank" rel="noopener" class="btn btn-ghost">WhatsApp Ruben</a>
       </div>
       <div class="who rv d4"><span class="av">AN</span><div><b>Dr A.O. Ndhlovu, SACAA Designated Aviation Medical Examiner (MR 336)</b><span>Class II and Class IV medicals, occupational health and GP care. Gate 2, Office TG6B, Grand Central Airport, Midrand.</span></div></div>
@@ -524,6 +539,8 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
       <div class="amt">R6,000 <small>per month</small></div>
       <p>Everything on this page, run for Clinotrend by Ads Creation Centre. No Google Ads spend is needed to start.</p>
       <div class="terms"><b style="color:#fff">No long-term contract. No lock-in.</b> You pay month to month and can cancel any time.</div>
+      <a href="https://paystack.shop/pay/clinotrend" target="_blank" rel="noopener" class="rocket big"><span class="rk">🚀</span><span>GET STARTED</span></a>
+      <div class="pay-note">Secure card payment by Paystack. R6,000 a month, cancel any time.</div>
     </div>
   </div>
 </section>
@@ -533,7 +550,8 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
     <div>
       <div class="kicker rv">Next step</div>
       <h2 class="rv d1">Happy to walk you through it, Dr Ndhlovu.</h2>
-      <p class="sub rv d2">Call, WhatsApp or email Ruben. If it suits you, we can start on the stage one foundations straight away.</p>
+      <p class="sub rv d2">Ready? Press the button and we start on the stage one foundations straight away. Questions first? Call, WhatsApp or email Ruben.</p>
+      <div style="margin:22px 0 6px"><a href="https://paystack.shop/pay/clinotrend" target="_blank" rel="noopener" class="rocket"><span class="rk">🚀</span><span>GET STARTED</span></a></div>
       <div class="promise">
         <div class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg><span>A short call to answer your questions</span></div>
         <div class="rv d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg><span>You approve every message before it goes live</span></div>
@@ -545,7 +563,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
       <p class="ct-sub">Call, WhatsApp or email. No forms, no call centre.</p>
       <a class="ct" href="tel:+27823478094"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg></span><span><small>Call</small><b>082 347 8094</b></span><span class="arr">&rsaquo;</span></a>
       <a class="ct" href="https://wa.me/27823478094" target="_blank" rel="noopener"><span class="ci wa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 01-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1121 11.5z"/></svg></span><span><small>WhatsApp</small><b>Send a message</b></span><span class="arr">&rsaquo;</span></a>
-      <a class="ct" href="mailto:Ruben@acreationc.com?subject=Free%20growth%20audit"><span class="ci em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></span><span><small>Email</small><b>Ruben@acreationc.com</b></span><span class="arr">&rsaquo;</span></a>
+      <a class="ct" href="mailto:Ruben@acreationc.com?subject=Clinotrend%20proposal"><span class="ci em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></span><span><small>Email</small><b>Ruben@acreationc.com</b></span><span class="arr">&rsaquo;</span></a>
     </div>
   </div>
 </section>
@@ -557,6 +575,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
   </div>
 </footer>
 
+<div class="gobar" id="gobar"><span class="gt">Your marketing team, <b>R6,000 a month</b>. No lock-in.</span><a href="https://paystack.shop/pay/clinotrend" target="_blank" rel="noopener" class="rocket"><span class="rk">🚀</span><span>GET STARTED</span></a></div>
 <script>
 (function(){
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -566,6 +585,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
     els.forEach(function(el){io.observe(el)});
   } else { els.forEach(function(el){el.classList.add('in')}); }
 })();
+(function(){var b=document.getElementById('gobar');function f(){b.classList.toggle('show',window.scrollY>500)}window.addEventListener('scroll',f,{passive:true});f();})();
 </script>
 </body>
 </html>
