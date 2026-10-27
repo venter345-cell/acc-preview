@@ -1,0 +1,20 @@
+{
+  "name": "ClinoTrend Health & Aviation",
+  "short_name": "ClinoTrend",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B1E1C",
+  "theme_color": "#0B1E1C",
+  "icons": [
+    {
+      "src": "/logo-square-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo-square-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

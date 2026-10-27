@@ -1,0 +1,61 @@
+<!doctype html><html lang="en-ZA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive"><title>Clinotrend: booking and SACAA form, live vs new | Ads Creation Centre</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font:14px/1.45 Inter,system-ui,sans-serif;color:#0B1E1C;background:#eef4f2;height:100vh;display:flex;flex-direction:column}
+header{background:#0B1E1C;color:#fff;padding:8px 12px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+header h1{font:800 15px Montserrat,Inter,sans-serif;margin-right:6px}header a{color:#5EE4C4}
+.grp{display:flex;gap:4px;flex-wrap:wrap}.grp button{border:1px solid #2DD4A6;background:transparent;color:#dff7f0;border-radius:999px;padding:4px 10px;font:600 12px Inter,sans-serif;cursor:pointer}
+.grp button.on{background:#2DD4A6;color:#0B1E1C}
+.cap{background:#fff;border-bottom:1px solid #cfe1dc;padding:8px 14px;font-size:13px;max-height:24vh;overflow:auto}.cap ul{margin:2px 0 4px 18px}.cap .warn{background:#fef3c7;border:1px solid #f59e0b;border-radius:8px;padding:6px 8px;margin-top:6px}
+main{flex:1;min-height:0;position:relative}.pane{display:none;position:absolute;inset:0;grid-template-columns:1fr 1fr}.pane.on{display:grid}
+.half{overflow:auto;position:relative;border-right:3px solid #0B1E1C;background:#fff;display:flex;flex-direction:column}.half.new{border-right:0}
+.tag{position:sticky;top:0;z-index:2;padding:6px 10px;font-size:12px;color:#fff}.live .tag{background:#b91c1c}.new .tag{background:#047857}
+.shot{padding:10px}.shot img{display:block;width:100%;max-width:900px;height:auto;margin:0 auto 12px;border:1px solid #ddd}.shot img.m{max-width:390px}
+.shot p{max-width:900px;margin:0 auto 10px}.empty{padding:30px;color:#3f5551;font-size:15px}
+iframe{flex:1;width:100%;border:0;background:#fff}.mob iframe{width:390px;margin:0 auto;border-left:1px solid #ddd;border-right:1px solid #ddd}
+@media (max-width:800px){.pane.on{grid-template-columns:1fr;grid-template-rows:1fr 1fr}.half{border-right:0;border-bottom:3px solid #0B1E1C}}
+</style></head><body>
+<header>
+  <h1>Clinotrend: online booking and SACAA form</h1>
+  <div class="grp" id="tabs">
+    <button data-p="book" class="on">Booking</button><button data-p="form">SACAA form</button><button data-p="travel">Travel clinic</button>
+  </div>
+  <div class="grp"><button id="mob">Phone width</button></div>
+  <span style="font-size:12px;color:#cfeee6">Left: current live site. Right: new version (preview, try it). Preview only, nothing is sent or booked.</span>
+</header>
+<div class="cap" id="cap"></div>
+<main>
+  <section class="pane on" id="p-book">
+    <div class="half live"><div class="tag">LIVE NOW: booking pop-up on the old Vercel system</div><div class="shot">
+      <p>Every Book button opens this pop-up. Bookings go to the old Vercel system and its database, not to GHL. Changes use "View booking".</p>
+      <img src="img/live-desktop-modal-1.webp" alt="Live booking pop-up, desktop"><img class="m" src="img/live-mobile-modal-1.webp" alt="Live booking pop-up, phone"></div></div>
+    <div class="half new"><div class="tag">NEW: /book/ page with the GHL calendars, SACAA form first for aviation</div><iframe data-src="/clinotrend/booking-preview/book/?service=aviation" title="New booking page"></iframe></div>
+  </section>
+  <section class="pane" id="p-form">
+    <div class="half live"><div class="tag">LIVE NOW: no online form. Paper SACAA form CA 67-08, filled in by hand</div><div class="shot">
+      <p>Patients fill in and sign the paper SACAA application at the practice (or print it themselves).</p>
+      <img src="img/paper-form-ca67-08.webp" alt="Paper SACAA application form CA 67-08"></div></div>
+    <div class="half new"><div class="tag">NEW: /sacaa-form/ online, signed with a finger or mouse, emailed as a PDF to info@ only</div><iframe data-src="/clinotrend/booking-preview/sacaa-form/?service=class-2" title="New SACAA form"></iframe></div>
+  </section>
+  <section class="pane" id="p-travel">
+    <div class="half live"><div class="tag">LIVE NOW: no travel clinic page</div><div class="empty">The live site has no travel clinic page or booking option.</div></div>
+    <div class="half new"><div class="tag">NEW: /travel-clinic/ (preview only until Dr Ndhlovu confirms the details)</div><iframe data-src="/clinotrend/booking-preview/travel-clinic/" title="New travel clinic page"></iframe></div>
+  </section>
+</main>
+<script>
+var CAP = {
+  book: '<b>What changed</b><ul><li>Every Book button now opens <b>/book/</b>: choose Class II (first medical), Class IV, Renewal, GP or occupational, or Travel clinic.</li><li>Aviation medicals are two steps: 1. the SACAA form online, 2. a time on the GoHighLevel calendar. GP and occupational go straight to the calendar.</li><li>The calendar asks only for name, phone, email and simple booking choices. No ID numbers, medical aid or health answers go to GHL.</li><li>"View booking" is gone: changes use the link in the GHL confirmation, or a call.</li><li>GA4: book_click as before, booking_submit when GHL confirms a booking (service only, never names or numbers).</li></ul><div class="warn">The GHL calendars are still switched off, so the preview shows a stand-in box where the calendar goes. Tap "Show what happens after booking" to see the confirmation.</div>',
+  form: '<b>What changed</b><ul><li>The SACAA application (form CA 67-08, version 27 May 2022) online in 6 short steps, items numbered as on the paper form, signature with a finger, stylus or mouse.</li><li>On send, the form becomes a PDF in the patient\'s browser and goes to the practice\'s own hosting, which emails it only to info@clinotrend-health.co.za and keeps no copy. Nothing goes to GHL, ACC or analytics (GA4 only counts that a form was sent).</li><li>Google Tag Manager does not load on this page. The patient can download a copy of their PDF.</li></ul><div class="warn">Preview: nothing is sent. At the end you can download the PDF that would be emailed. Please use made-up details only.</div>',
+  travel: '<b>What changed</b><ul><li>New travel clinic page and a Travel clinic option on /book/: pre-travel consultation, travel health advice, vaccinations by appointment, malaria prevention advice. Booking by phone or WhatsApp for now (no GHL travel calendar yet).</li><li>Yellow fever: "only given at registered yellow fever vaccination centres, ask us". No prices.</li></ul><div class="warn">Held back from the live build until Dr Ndhlovu confirms which travel vaccines he offers and whether the practice is a registered yellow fever centre.</div>'
+};
+function show(p){ document.querySelectorAll('.pane').forEach(function(x){ x.classList.toggle('on', x.id === 'p-' + p); });
+  document.querySelectorAll('#tabs button').forEach(function(b){ b.classList.toggle('on', b.dataset.p === p); });
+  document.getElementById('cap').innerHTML = CAP[p];
+  var f = document.querySelector('#p-' + p + ' iframe'); if (f && !f.src) f.src = f.dataset.src;
+  history.replaceState(null, '', '#' + p); }
+document.querySelectorAll('#tabs button').forEach(function(b){ b.onclick = function(){ show(b.dataset.p); }; });
+document.getElementById('mob').onclick = function(){ document.body.classList.toggle('mob'); this.classList.toggle('on'); };
+show((location.hash || '#book').slice(1) in CAP ? location.hash.slice(1) : 'book');
+</script>
+<!-- Review comments: use the Add comment button inside the new version on the right (each preview page has it). -->
+</body></html>

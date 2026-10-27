@@ -1,0 +1,12 @@
+Book Appointment
+
+Follow the steps to secure your slot
+
+Your Details
+Aviation Medical
+First Name *
+Last Name *
+Email *
+Phone Number *
+Back
+Continue
