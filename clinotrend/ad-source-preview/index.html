@@ -1,0 +1,35 @@
+<!doctype html><html lang="en-ZA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive"><title>ClinoTrend: ad source into the aCc calendar, live vs new | aCc</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font:14px/1.5 Inter,system-ui,sans-serif;color:#0B1E1C;background:#eef4f2;height:100vh;display:flex;flex-direction:column}
+header{background:#0B1E1C;color:#fff;padding:10px 14px}header h1{font:800 16px Montserrat,Inter,sans-serif}header p{color:#cfe9e2;font-size:13px;margin-top:2px}
+code{font:12px ui-monospace,Menlo,monospace;background:#f1f5f4;border:1px solid #d6e4e0;border-radius:6px;padding:6px 8px;display:block;word-break:break-all;margin:6px 0}
+main{flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr}
+.half{display:flex;flex-direction:column;min-height:0;background:#fff;border-right:3px solid #0B1E1C}.half.new{border-right:0}
+.tag{padding:7px 12px;font-weight:700;color:#fff;font-size:13px}.live .tag{background:#b91c1c}.new .tag{background:#047857}
+.box{padding:10px 14px;border-bottom:1px solid #d6e4e0;font-size:13px}.box ul{margin:4px 0 0 18px}
+.bad{color:#b91c1c;font-weight:700}.good{color:#047857;font-weight:700}
+.half.live .rest{padding:14px;color:#3f5551;overflow:auto}
+iframe{flex:1;width:100%;border:0;min-height:0}
+@media (max-width:800px){main{grid-template-columns:1fr;grid-template-rows:auto 1fr}.half{border-right:0;border-bottom:3px solid #0B1E1C}}
+</style></head><body>
+<header><h1>ClinoTrend: Google Ads source into the aCc booking calendar</h1>
+<p>Sample visit: an ad click lands on <b>clinotrend-health.co.za/?gclid=TEST&amp;utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=ct-search-ame</b>, then the visitor goes to Book online and picks the GP calendar. Preview only, nothing is live.</p></header>
+<main>
+<section class="half live"><div class="tag">LIVE now</div>
+<div class="box"><b>Calendar iframe src on /book/</b> (read from the live site, 2 Nov 2026):
+<code>https://api.leadconnectorhq.com/widget/booking/tEJTBwWDMQ6SfkmoHH5s</code>
+<span class="bad">No gclid, no utm values.</span> The calendar only sees its own bare URL, so aCc records the booking as <b>Direct Traffic</b>. HighLevel only records UTMs that are on the page where the booking is made, and the visitor landed on another page.</div>
+<div class="rest"><p>Google Ads and GA4 still count the booking (booking_confirmed through GA4). Only the aCc contact misses the ad source.</p><p style="margin-top:8px">The live page can't be shown inside this frame (the site blocks framing), so this side shows what the live page loads.</p></div>
+</section>
+<section class="half new"><div class="tag">NEW (branch ad-source-passthrough)</div>
+<div class="box"><b>Calendar iframe src on /book/</b> (from the new build under the live address, 2 Nov 2026):
+<code>https://api.leadconnectorhq.com/widget/booking/tEJTBwWDMQ6SfkmoHH5s?gclid=TEST&amp;utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=ct-search-ame</code>
+<b>What aCc should record</b> on the contact (First and Latest Attribution, bottom right of the contact record):
+<ul><li>Session source <span class="good">Paid Search</span> (to be confirmed with one test booking after go-live) (HighLevel's rule: a gclid, gbraid or wbraid means Paid Search)</li>
+<li>Landing URL with the ad values, UTM source google, UTM medium cpc, Campaign ct-search-ame, gclid TEST</li>
+<li>Kept from the first ad visit for 90 days on that browser, so a patient who comes back days later and books is still tied to the ad. Only these ad and campaign values are passed, never names, numbers or medical answers.</li></ul>
+Below: the new site in preview. The preview shows a stand-in box instead of the real calendar, and the stand-in prints the calendar address it would load.</div>
+<iframe src="site/book/?service=appointment&amp;gclid=TEST&amp;utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=ct-search-ame" title="New site preview, Book online"></iframe>
+</section>
+</main></body></html>
