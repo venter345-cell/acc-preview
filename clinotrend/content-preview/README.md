@@ -1,4 +1,9 @@
-# ClinoTrend content review preview (29 Oct 2026)
-Landing: https://proposals.acreationc.com/clinotrend/content-preview/ (index.html, phone.html, built by /workspace/clinotrend/content-batch-1/build_landing.py)
-Site build: site/ = `VITE_PREVIEW=1 PREVIEW_BASE=/clinotrend/content-preview/site/` build of branch content-batch-1 (site repo, worktree /workspace/clinotrend/content-wt), rebuilt 10 November 2026 with approved final article text (no confirm boxes).
-Comments: own ntfy topic (see /workspace/clinotrend/content-batch-1/topic.txt), archived to venter345-cell/acc-review-comments as clinotrend-content.md / .json. Noindex on every page; robots.txt at the domain root disallows all.
+# ClinoTrend content review preview
+
+Landing: https://proposals.acreationc.com/clinotrend/content-preview/
+
+Site build: site/ = `VITE_PREVIEW=1 PREVIEW_BASE=/clinotrend/content-preview/site/` plus compare and comments env, built from site branch `content-local-gauteng-20261110` (worktree /workspace/clinotrend/golive-adsrc-wt) on 10 November 2026.
+
+The 8 approved aviation medical guides are live on clinotrend-health.co.za (uploaded 10:16 SAST, 10 Nov 2026). This preview still holds them, plus draft local and service pages (not live). Start at /local/.
+
+Comments: ntfy topic acc-clinotrend-content-4dc2a79297, archived to venter345-cell/acc-review-comments as clinotrend-content.md / .json. Noindex on every page.
