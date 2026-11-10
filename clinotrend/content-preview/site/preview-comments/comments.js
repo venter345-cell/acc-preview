@@ -6,13 +6,16 @@
 (function(){
 "use strict";
 if (window.__cmLoaded) return; window.__cmLoaded = true;
-var TOPIC = "acc-clinotrend-site-5c154d575d";
-var ARCHIVE = "https://raw.githubusercontent.com/venter345-cell/acc-review-comments/main/clinotrend-site.json";
-var LABEL = "Website preview";
+/* A preview build can point the layer at its own topic (PREVIEW_COMMENTS_TOPIC etc., set by scripts/prerender.mjs
+   as window.__CM_CONFIG), for example the content review preview. Default: the site preview topic. */
+var CFG = window.__CM_CONFIG || {};
+var TOPIC = CFG.topic || "acc-clinotrend-site-5c154d575d";
+var ARCHIVE = CFG.archive || "https://raw.githubusercontent.com/venter345-cell/acc-review-comments/main/clinotrend-site.json";
+var LABEL = CFG.label || "Website preview";
 var me = document.currentScript && document.currentScript.src || "";
 var BASE = me ? new URL("../", me).pathname : "/";          /* e.g. /clinotrend/site-preview/ */
 var ORIGIN = location.origin;
-var LS = "acc-clinotrend-site-v1";
+var LS = CFG.storageKey || "acc-clinotrend-site-v1";
 var $ = function(s, r){ return (r||document).querySelector(s); };
 
 function route(){ var p = location.pathname; if (p.indexOf(BASE) === 0) p = "/" + p.slice(BASE.length); return p.replace(/index\.html$/, "") || "/"; }
