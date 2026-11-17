@@ -6,6 +6,8 @@ New pages in the preview site:
 - Homepage: https://proposals.acreationc.com/clinotrend/content-preview/seo-keywords/site/
 - Aviation medicals: https://proposals.acreationc.com/clinotrend/content-preview/seo-keywords/site/aviation-medicals/
 - Class 4 medical: https://proposals.acreationc.com/clinotrend/content-preview/seo-keywords/site/class-4-medical/
+- Cabin crew medical (17 Nov 2026): https://proposals.acreationc.com/clinotrend/content-preview/seo-keywords/site/cabin-crew-medical/
+- Phone view: https://proposals.acreationc.com/clinotrend/content-preview/seo-keywords/phone.html?u=/clinotrend/content-preview/seo-keywords/site/cabin-crew-medical/
 
 Built from site branch `seo-keywords-preview-20261116` (worktree `/workspace/clinotrend/seo-kw-wt`), based on `content-local-golive-20261110` (6fdd81d), on 16 November 2026, Africa/Johannesburg (UTC+2). The occupational landing preview was not used as the base, because these changes are for the aviation pages and the already approved local pages.
 
@@ -16,3 +18,5 @@ Nothing from this preview is on the live site, cPanel, or DNS.
 Comments: ntfy topic acc-clinotrend-content-4dc2a79297, archived to venter345-cell/acc-review-comments as clinotrend-content.md / .json. Use the Add comment button on the new pages. Do not post test comments to the real topic.
 
 Backup before editing: `/workspace/clinotrend/backups/site-before-seo-keywords-20261116-172928.bundle`
+
+17 November 2026: rebuilt from `seo-keywords-preview-20261116` at 11754ec (c2cfa76 plus the Class 5 wording fix) with the Aviation medicals dropdown and /cabin-crew-medical/. Build: `VITE_PREVIEW=1 PREVIEW_BASE=/clinotrend/content-preview/seo-keywords/site/ VITE_COMPARE_URL=/clinotrend/content-preview/seo-keywords/` plus the comments env. Backup before editing: `/workspace/clinotrend/backups/site-before-cabin-crew-menu-20261117-083854.bundle`. The live/ snapshot is unchanged.
