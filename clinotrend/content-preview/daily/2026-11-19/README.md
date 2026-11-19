@@ -5,7 +5,7 @@ Review only, noindex: https://proposals.acreationc.com/clinotrend/content-previe
 - Article: https://proposals.acreationc.com/clinotrend/content-preview/daily/2026-11-19/site/blog/pilot-with-asthma-sacaa-medical/
 - Phone view: https://proposals.acreationc.com/clinotrend/content-preview/daily/2026-11-19/phone.html?u=/clinotrend/content-preview/daily/2026-11-19/site/blog/pilot-with-asthma-sacaa-medical/
 
-Built from site branch `article-20261119-asthma` (worktree `/workspace/clinotrend/article-20261119-wt`, commit 4505501), based on production `fun-404-20261118` (e0e1432), on 19 November 2026, Africa/Johannesburg (UTC+2). Build: VITE_PREVIEW=1, PREVIEW_BASE=/clinotrend/content-preview/daily/2026-11-19/site/, comments topic acc-clinotrend-content-4dc2a79297 ("Articles preview").
+Built from site branch `article-20261119-asthma` (worktree `/workspace/clinotrend/article-20261119-wt`, commit 4505501), based on production `fun-404-20261118` (e0e1432), on 19 November 2026, Africa/Johannesburg (UTC+2). Build: VITE_PREVIEW=1, PREVIEW_BASE=/clinotrend/content-preview/daily/2026-11-19/site/, PREVIEW_COMMENTS_* set for the content topic, but the production comments.js on this branch does not read __CM_CONFIG, so the Add comment button posts to the site preview topic acc-clinotrend-site-5c154d575d (archived to venter345-cell/acc-review-comments as clinotrend-site.md / .json), the same as the fun 404 and flight schools previews. Do not post test comments to the real topic.
 
 Nothing from this preview is on the live site, cPanel, or DNS.
 
