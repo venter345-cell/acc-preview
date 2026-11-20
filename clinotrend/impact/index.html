@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <title>ClinoTrend progress report, 20 Nov 2026 | Ads Creation Centre</title>
-<meta name="description" content="Private progress report for Dr A.O. Ndhlovu: work done and results recorded from 22 Oct to 20 Nov 2026.">
+<meta name="description" content="Private progress report for Dr A.O. Ndhlovu: work done and results from 22 Oct to 20 Nov 2026.">
 <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
 :root{
   --ink:#0B1E1C; --ink2:#143830; --muted:#3F5C57; --line:#d6e4e0;
   --paper:#F6FBFA; --card:#fff; --mint:#2DD4A6; --mint2:#5EE4C4;
-  --warn:#92400e; --warnbg:#fff7ed; --warnline:#f5d0a0;
+  --bad:#991b1b; --badbg:#fdf2f2;
   --good:#047857; --goodbg:#effaf5;
   --max:1120px;
   --sans:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -23,7 +23,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%;height:auto}
 a{color:var(--ink);text-underline-offset:3px}
 .wrap{width:min(var(--max), calc(100% - 32px));margin:0 auto}
@@ -31,16 +31,20 @@ a{color:var(--ink);text-underline-offset:3px}
 .skip:focus{left:12px;top:12px;background:#fff;padding:8px 12px;z-index:100}
 
 /* header */
-.top{background:var(--ink);color:#e8f7f2;padding:14px 0 18px}
+.top{background:var(--ink);color:#e8f7f2;padding:14px 0 22px}
 .top-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .logo{height:52px;width:auto}
 .top-meta{font-size:12px;color:#cfeee6;text-align:right;line-height:1.45}
 .top-meta strong{display:block;color:#fff;font-size:13px;font-weight:700}
-.hero{padding:28px 0 8px}
+.hero{padding:26px 0 4px}
 .kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mint2);margin-bottom:10px}
-h1{font-family:var(--display);font-weight:800;font-size:1.85rem;letter-spacing:-.02em;line-height:1.15;color:#fff;max-width:14em}
-.lede{margin-top:14px;max-width:40rem;color:#d7eee8;font-size:1.02rem}
-.lede a{color:var(--mint2)}
+h1{font-family:var(--display);font-weight:800;font-size:1.85rem;letter-spacing:-.02em;line-height:1.15;color:#fff;max-width:15em}
+.lede{margin-top:12px;max-width:38rem;color:#d7eee8;font-size:1rem}
+.hl{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.hl div{background:rgba(255,255,255,.06);border:1px solid rgba(94,228,196,.25);border-radius:14px;padding:12px 14px}
+.hl b{display:block;font-family:var(--display);font-size:1.7rem;font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.1}
+.hl span{display:block;font-size:13px;color:#d7eee8;margin-top:3px}
+.hl small{display:block;font-size:11.5px;color:var(--mint2);margin-top:4px;font-weight:600}
 
 /* nav */
 nav{position:sticky;top:0;z-index:40;background:rgba(11,30,28,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(94,228,196,.18)}
@@ -50,60 +54,47 @@ nav a{flex:0 0 auto;color:#dff7f0;text-decoration:none;font-size:13px;font-weigh
 nav a:hover,nav a:focus{border-color:var(--mint);color:#fff}
 
 /* sections */
-section{padding:36px 0}
-h2{font-family:var(--display);font-weight:800;font-size:1.45rem;letter-spacing:-.02em;margin-bottom:8px}
-h3{font-family:var(--display);font-weight:700;font-size:1.05rem;margin:22px 0 8px}
-.intro{color:var(--muted);max-width:42rem;margin-bottom:20px}
-.note{background:#fff;border-left:3px solid var(--mint);padding:10px 12px;margin:0 0 18px;font-size:14px;color:var(--muted);max-width:46rem}
+section{padding:32px 0}
+h2{font-family:var(--display);font-weight:800;font-size:1.4rem;letter-spacing:-.02em;margin-bottom:4px}
+h3{font-family:var(--display);font-weight:700;font-size:1rem;margin:0 0 8px}
+.sub{color:var(--muted);font-size:14px;margin-bottom:16px}
 
-/* compare */
-.pair{display:grid;gap:12px;margin-top:18px}
-.col{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 16px 8px;overflow:hidden}
-.col h3{margin:0 0 10px;font-size:.95rem}
-.col.before{border-top:4px solid #b91c1c}
-.col.after{border-top:4px solid var(--good)}
-.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:999px;margin-bottom:8px}
-.before .tag{background:#fdf2f2;color:#991b1b}
-.after .tag{background:var(--goodbg);color:var(--good)}
-table.cmp{width:100%;border-collapse:collapse;font-size:14px}
-table.cmp th,table.cmp td{text-align:left;vertical-align:top;padding:8px 0;border-bottom:1px solid var(--line)}
-table.cmp th{color:var(--muted);font-weight:600;width:42%;padding-right:10px}
-table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
+/* before vs now */
+.bn{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.bn-row{display:grid;grid-template-columns:1fr;gap:4px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.bn-row:last-child{border-bottom:0}
+.bn-head{display:none}
+.bn-k{font-weight:700;font-size:14px}
+.bn-b,.bn-n{font-size:14px;display:flex;gap:8px;align-items:baseline}
+.bn-b{color:var(--bad)}
+.bn-n{color:var(--good);font-weight:600}
+.bn-b::before,.bn-n::before{flex:0 0 auto;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:999px}
+.bn-b::before{content:"Before";background:var(--badbg)}
+.bn-n::before{content:"Now";background:var(--goodbg)}
 
-/* stats */
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
-.stat b{display:block;font-family:var(--display);font-size:1.55rem;font-weight:800;letter-spacing:-.03em;line-height:1.1}
-.stat span{display:block;margin-top:4px;font-size:13px;color:var(--muted)}
-.stat em{font-style:normal;display:block;margin-top:6px;font-size:11px;color:#5b6b67}
+/* tiles */
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 14px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 14px}
+.stat b{display:block;font-family:var(--display);font-size:1.5rem;font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.stat span{display:block;margin-top:3px;font-size:13px;color:var(--muted)}
 
-/* lists and cards */
-.cards{display:grid;gap:12px;margin-top:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
-.card h3{margin-top:0}
-.card ul,.prose ul{margin:8px 0 0 18px}
-.card li,.prose li{margin:6px 0}
-.num{display:inline-flex;align-items:center;justify-content:center;min-width:1.7rem;height:1.7rem;padding:0 6px;border-radius:999px;background:var(--ink);color:#fff;font-size:12px;font-weight:700;margin-right:6px}
+/* cards and bullets */
+.cards{display:grid;gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:15px 16px}
+.card ul{margin:0 0 0 18px}
+.card li{margin:5px 0;font-size:14.5px}
+.card li b{font-weight:700}
+.card.key{border-left:4px solid var(--mint)}
+.why{margin-top:12px;background:var(--goodbg);border:1px solid #cdeee0;border-radius:14px;padding:12px 14px;font-size:14.5px}
+.why ul{margin:6px 0 0 18px}
+.why li{margin:4px 0}
+.why strong{color:var(--good);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 
-/* placeholders */
-.todo{background:var(--warnbg);border:1px dashed var(--warnline);border-radius:14px;padding:14px 16px;margin:14px 0;color:var(--warn)}
-.todo strong{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
-.todo p{font-size:14px;color:#7c4a12}
-
-/* channel blocks */
-.channel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:12px 0}
-.channel header{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline;margin-bottom:8px}
-.channel h3{margin:0}
-.when{font-size:12px;font-weight:600;color:var(--muted)}
-.kv{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;margin-top:10px}
-.kv.three{grid-template-columns:1fr 1fr}
-.kv div{background:var(--paper);border-radius:10px;padding:10px 12px}
-.kv b{display:block;font-size:1.15rem;font-family:var(--display)}
-.kv span{font-size:12px;color:var(--muted)}
-
-footer{background:var(--ink);color:#cfeee6;padding:28px 0 36px;font-size:13px}
+footer{background:var(--ink);color:#cfeee6;padding:26px 0 34px;font-size:12.5px}
 footer a{color:var(--mint2)}
-footer p{margin:0 0 8px;max-width:46rem}
+footer p{margin:0 0 8px;max-width:48rem}
+footer ul{margin:0 0 10px 18px;max-width:48rem}
+footer li{margin:3px 0}
 
 @media (max-width:719px){
   .top-row{flex-direction:column;align-items:flex-start;gap:10px}
@@ -111,18 +102,20 @@ footer p{margin:0 0 8px;max-width:46rem}
   h1{max-width:none}
 }
 @media (min-width:720px){
-  h1{font-size:2.5rem;max-width:16em}
+  h1{font-size:2.4rem;max-width:16em}
   .logo{height:60px}
-  .pair{grid-template-columns:1fr 1fr}
+  .hl{grid-template-columns:repeat(3,1fr)}
   .stats{grid-template-columns:repeat(4,1fr)}
   .cards{grid-template-columns:1fr 1fr}
-  .cards.three{grid-template-columns:1fr 1fr 1fr}
-  .kv{grid-template-columns:repeat(4,1fr)}
-  .kv.three{grid-template-columns:repeat(3,1fr)}
-  section{padding:48px 0}
+  .cards.one{grid-template-columns:1fr}
+  .bn-head{display:grid}
+  .bn-row{grid-template-columns:1.1fr 1.4fr 1.6fr;gap:14px;align-items:baseline}
+  .bn-head div{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .bn-b::before,.bn-n::before{display:none}
+  section{padding:44px 0}
 }
-@media (min-width:1080px){
-  .wrap{width:min(var(--max), calc(100% - 48px))}
+@media (min-width:1000px){
+  .hl{grid-template-columns:repeat(6,1fr)}
 }
 </style>
 </head>
@@ -135,306 +128,213 @@ footer p{margin:0 0 8px;max-width:46rem}
       <div class="top-meta">
         <strong>Private progress report</strong>
         For Dr A.O. Ndhlovu<br>
-        22 Oct to 20 Nov 2026<br>
-        Africa/Johannesburg (UTC+2)
+        22 Oct to 20 Nov 2026
       </div>
     </div>
     <div class="hero">
       <p class="kicker">Ads Creation Centre</p>
-      <h1>Four weeks of work, and what the numbers show</h1>
-      <p class="lede">This page sits next to the starting-point record we took when the new site went live. It is a factual account of the work done since 22 Oct 2026, and the bookings, visits and search figures recorded up to 20 Nov 2026. It is not for publication. No patient names or clinical details are included. The original baseline is on the <a href="https://proposals.acreationc.com/clinotrend/compare/#baseline">ClinoTrend starting point page</a>.</p>
+      <h1>Four weeks in: what changed for ClinoTrend</h1>
+      <p class="lede">From a one-page site with no tracking and 1 online booking, to a findable, measured website and a working booking diary.</p>
+      <div class="hl" role="list">
+        <div role="listitem"><b>18</b><span>appointments in aCc</span><small>Was 1 booking</small></div>
+        <div role="listitem"><b>46</b><span>pages Google can find</span><small>Was 1</small></div>
+        <div role="listitem"><b>19</b><span>pilot and crew articles</span><small>Was 0</small></div>
+        <div role="listitem"><b>1,490</b><span>Google search impressions</span><small>26 Oct to 17 Nov</small></div>
+        <div role="listitem"><b>274</b><span>website visits measured</span><small>Was not tracked</small></div>
+        <div role="listitem"><b>1</b><span>drone school sending students</span><small>Agreed 19 Nov</small></div>
+      </div>
     </div>
   </div>
 </header>
 <nav aria-label="Report sections">
   <div class="wrap">
-    <a href="#start">Start vs now</a>
-    <a href="#inputs">What we did</a>
-    <a href="#results">Search and visits</a>
-    <a href="#ads">Google Ads</a>
+    <a href="#before-now">Before vs now</a>
+    <a href="#work">Work done</a>
     <a href="#bookings">Bookings</a>
-    <a href="#partners">Partnerships</a>
-    <a href="#today">Today, 20 Nov</a>
-    <a href="#next">Next steps</a>
+    <a href="#search">Search and visits</a>
+    <a href="#ads">Google Ads</a>
+    <a href="#partners">Schools and outreach</a>
   </div>
 </nav>
 <main id="main">
 
-<section id="start">
+<section id="before-now">
   <div class="wrap">
-    <h2>Starting point vs now</h2>
-    <p class="intro">Work started on 22 Oct 2026. The new website went live on 26 Oct 2026, and that is the date of the recorded baseline. Today is 20 Nov 2026, 25 days after that go-live, and 29 days after kickoff.</p>
-    <div class="pair">
-      <div class="col before">
-        <span class="tag">Starting point</span>
-        <h3>Recorded 22 to 26 Oct 2026</h3>
-        <table class="cmp">
-          <tr><th>Public sitemap</th><td>1 URL (the home page only)</td></tr>
-          <tr><th>Text for Google without JavaScript</th><td>No. Crawlers saw an empty page plus a short noscript line</td></tr>
-          <tr><th>Analytics</th><td>No Google Analytics. The Ads tag on the site was a placeholder, so tracking was not working</td></tr>
-          <tr><th>WhatsApp link</th><td>The site link used a broken number format</td></tr>
-          <tr><th>Unknown addresses</th><td>Returned the home page (a soft 404)</td></tr>
-          <tr><th>Google Business Profile</th><td>0 reviews, 0 services, no description, 3 photos</td></tr>
-          <tr><th>Bookings on file</th><td>1 booking in the old website booking system</td></tr>
-          <tr><th>Lab mobile performance</th><td>62, with a 7.2 second Largest Contentful Paint and a 6,385 KB page</td></tr>
-        </table>
-      </div>
-      <div class="col after">
-        <span class="tag">Now</span>
-        <h3>As at 20 Nov 2026</h3>
-        <table class="cmp">
-          <tr><th>Public sitemap</th><td>46 URLs, once today's two articles are included (44 were already live after 18 Nov)</td></tr>
-          <tr><th>Text for Google without JavaScript</th><td>Yes. Pages are prerendered, so the words are in the HTML</td></tr>
-          <tr><th>Analytics</th><td>Google Analytics, Tag Manager, Microsoft Clarity and Search Console are all in place</td></tr>
-          <tr><th>WhatsApp</th><td>Replaced with the practice chat widget</td></tr>
-          <tr><th>Unknown addresses</th><td>Return a real 404 page ("Not cleared for takeoff"), live from 18 Nov</td></tr>
-          <tr><th>Google Business Profile</th><td>Description, hours, WhatsApp, 11 services and new photos were added on 26 Oct. Verification is still outstanding, and reviews remain at 0</td></tr>
-          <tr><th>Bookings on file</th><td>18 confirmed appointments in aCc (17 new, plus the 1 moved across from the old system)</td></tr>
-          <tr><th>Lab mobile performance</th><td>78 on the 18 Nov redesign (same lab method as the baseline). The live host scored 97 on 18 Nov, which is a different method and is not a direct comparison</td></tr>
-        </table>
-      </div>
+    <h2>Before vs now</h2>
+    <p class="sub">Starting point recorded 22 to 26 Oct 2026. Now is 20 Nov 2026.</p>
+    <div class="bn">
+      <div class="bn-row bn-head"><div>Area</div><div>Before</div><div>Now</div></div>
+      <div class="bn-row"><div class="bn-k">Bookings on file</div><div class="bn-b">1 booking in the old system</div><div class="bn-n">18 appointments in aCc</div></div>
+      <div class="bn-row"><div class="bn-k">Pages Google can find</div><div class="bn-b">1 (home page only)</div><div class="bn-n">46 in the sitemap</div></div>
+      <div class="bn-row"><div class="bn-k">Text Google can read</div><div class="bn-b">About 50 words, no real content</div><div class="bn-n">Full text on every page</div></div>
+      <div class="bn-row"><div class="bn-k">Articles</div><div class="bn-b">0</div><div class="bn-n">19 pilot and cabin crew guides</div></div>
+      <div class="bn-row"><div class="bn-k">Tracking</div><div class="bn-b">None working (placeholder tag)</div><div class="bn-n">Analytics, Clarity, Search Console and Ads</div></div>
+      <div class="bn-row"><div class="bn-k">Mobile speed score (lab)</div><div class="bn-b">62, page of 6,385 KB</div><div class="bn-n">78 (18 Nov), page cut to 705 KB</div></div>
+      <div class="bn-row"><div class="bn-k">WhatsApp link</div><div class="bn-b">Broken number format</div><div class="bn-n">Working chat widget</div></div>
+      <div class="bn-row"><div class="bn-k">Google Business Profile</div><div class="bn-b">No description, 0 services, 3 photos</div><div class="bn-n">Description, hours, 11 services, new photos</div></div>
     </div>
-    <p class="note">The 26 Oct baseline, including Google Business Profile figures for May to Oct 2026, is kept on the <a href="https://proposals.acreationc.com/clinotrend/compare/#baseline">starting point page</a>. A fuller four-month review is planned for about 26 Feb 2027.</p>
   </div>
 </section>
 
-<section id="inputs">
+<section id="work">
   <div class="wrap">
-    <h2>What we did</h2>
-    <p class="intro">These are the inputs: the work completed between 22 Oct and 20 Nov 2026. Today's two articles and the related site upload are included.</p>
+    <h2>Work done</h2>
+    <p class="sub">22 Oct to 20 Nov 2026.</p>
     <div class="stats">
-      <div class="stat"><b>19</b><span>pilot and cabin crew articles live, once today's two are up</span><em>8 in the first batch (10 Nov), 9 in the second (18 Nov), 2 daily articles (20 Nov)</em></div>
-      <div class="stat"><b>46</b><span>URLs in the public sitemap</span><em>Was 1 at the start, then 8 on 26 Oct, 44 after 18 Nov, 46 after today</em></div>
-      <div class="stat"><b>4</b><span>public booking calendars in aCc</span><em>Live from 28 Oct 2026, with confirmation, reminders and review emails</em></div>
-      <div class="stat"><b>25</b><span>days since the new site went live</span><em>Kickoff 22 Oct. Site 26 Oct. Bookings 28 Oct. Ads 2 Nov</em></div>
+      <div class="stat"><b>19</b><span>articles live (8 on 10 Nov, 9 on 18 Nov, 2 on 20 Nov)</span></div>
+      <div class="stat"><b>14</b><span>local and service pages (Midrand, Pretoria, Class 2 and more)</span></div>
+      <div class="stat"><b>4</b><span>public booking calendars, live 28 Oct</span></div>
+      <div class="stat"><b>11</b><span>services added to the Google Business Profile</span></div>
     </div>
     <div class="cards">
+      <div class="card key">
+        <h3>Latest, 20 Nov 2026</h3>
+        <ul>
+          <li>2 new guides live: <b>pilot with asthma</b> and <b>pilot hearing test</b>.</li>
+          <li>Sitemap resubmitted: Google now sees <b>46 pages, up from 19</b>.</li>
+          <li>Indexing requested for both guides, the flight schools page and the blog.</li>
+        </ul>
+      </div>
       <div class="card">
         <h3>Website</h3>
         <ul>
-          <li>Full rebuild of the old one-page site into prerendered pages, with wording checked against HPCSA rules. Aviation fees are shown as from R1,500.</li>
-          <li>New service pages: aviation medicals, Class 4, cabin crew, occupational health, GP services, flight schools (plus a student handout), the online SACAA application form, a review page, and a real 404 page.</li>
-          <li>14 local and service pages under aviation medicals (Gauteng, Midrand, Johannesburg, Pretoria, Centurion, East Rand, Lanseria, fly-in, Class 2, renewal, student pilot, recreational pilots, cost, and a local index).</li>
-          <li>17 articles were already live before today. Today's two additions are "Can you be a pilot with asthma" (with the in-practice lung function test) and "Pilot hearing test: what the SACAA medical checks".</li>
-          <li>Visual redesign (18 Nov), speed work, and search titles and text aimed at the phrases people actually use.</li>
+          <li>Rebuilt the one-page site into prerendered pages Google can read.</li>
+          <li>Pages for aviation medicals, Class 4, cabin crew, occupational health, GP and flight schools.</li>
+          <li>Online SACAA form, review page and a real 404 page.</li>
+          <li>Visual redesign live 18 Nov. Fees shown as from R1,500, wording checked for HPCSA.</li>
         </ul>
       </div>
       <div class="card">
-        <h3>Practice systems</h3>
+        <h3>Practice systems (aCc)</h3>
         <ul>
-          <li>aCc set up for the practice: contacts, pipelines, and four public calendars (Class II first medical, Class II or IV renewal, Class IV, and GP or occupational).</li>
-          <li>Online booking on the website, plus the ability for reception to add a booking after a call.</li>
-          <li>Appointment confirmation, 24 hour and 2 hour reminders, cancellation handling, a new-lead alert, and a post-visit review request by email.</li>
-          <li>Appointment emails are sent from info@clinotrend-health.co.za (branded sending domain live 5 Nov).</li>
-          <li>The one booking from the old system was moved into aCc on 28 Oct.</li>
-          <li>Google Business Profile basics were filled in on 26 Oct (description, hours, WhatsApp, 11 services, photos). Google posts have been published. The listing is not yet verified, so Google review requests are still held.</li>
+          <li>Contacts, pipelines and 4 booking calendars.</li>
+          <li>Reception adds phone bookings straight into the diary.</li>
+          <li>Automatic confirmation, 24 hour and 2 hour reminders, and review request.</li>
+          <li>Emails sent from info@clinotrend-health.co.za.</li>
         </ul>
       </div>
       <div class="card">
-        <h3>Tracking and ads</h3>
+        <h3>Tracking, ads and listing</h3>
         <ul>
-          <li>Google Analytics, Google Tag Manager, Microsoft Clarity and Search Console connected and recording.</li>
-          <li>Phone, WhatsApp, booking and form events are tracked. Phone clicks and booking confirmations are marked as key events.</li>
-          <li>Google Ads search campaigns have been running since 2 Nov 2026, in Gauteng, at R55 a day at the current budget.</li>
-          <li>Site health in SiteGuru was 89% at the last check used for this report.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Outreach</h3>
-        <ul>
-          <li>A flight schools page and student handout went live on 18 Nov, so schools have a clear page to send people to.</li>
-          <li>LinkedIn outreach through Closely has been running since 23 Oct: 85 connection requests, 10 accepted, and 3 replies, from 92 prospects.</li>
-          <li>An RPAS (drone) school has agreed to send its students to the practice. That was confirmed on 19 Nov 2026.</li>
+          <li>Phone, WhatsApp, chat, booking and form taps all tracked.</li>
+          <li>Google search ads live since 2 Nov, R55 a day.</li>
+          <li>Google Business Profile filled in and Google posts published.</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section id="results">
+<section id="bookings">
   <div class="wrap">
-    <h2>Search, visits and on-site behaviour</h2>
-    <p class="intro">Each block is labelled with the exact date range. Totals cover the period from kickoff or go-live to mid or late November. The week-on-week visit comparison from 19 Nov is kept, because it shows how engagement changed in the most recent fortnight.</p>
+    <h2>Bookings in aCc</h2>
+    <p class="sub">Read from aCc on 20 Nov 2026. Counts only, no names.</p>
+    <div class="stats">
+      <div class="stat"><b>18</b><span>confirmed appointments (was 1)</span></div>
+      <div class="stat"><b>17</b><span>new since aCc went live, all added by reception</span></div>
+      <div class="stat"><b>16</b><span>dates already passed, 2 still to come</span></div>
+      <div class="stat"><b>11</b><span>different people or schools booking</span></div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>By calendar</h3>
+        <ul>
+          <li>Class II first medical: <b>7</b> (incl. the 1 moved from the old system)</li>
+          <li>Class IV, cabin crew and recreational: <b>8</b></li>
+          <li>Class II or IV renewal: <b>2</b></li>
+          <li>GP or occupational: <b>1</b></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>What it shows</h3>
+        <ul>
+          <li>Phone bookings now land in one diary with automatic reminders.</li>
+          <li><b>8 of 17</b> new appointments came from 2 repeat bookers, one of them a flight school.</li>
+          <li>2 booking contacts first reached the practice through the website chat widget.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="why">
+      <strong>Checked</strong>
+      <ul>
+        <li>No test, cancelled or duplicate records are counted. 17 were entered by reception, 1 came from the old system.</li>
+        <li>Attendance is not yet marked in aCc, so passed dates are not confirmed visits.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <article class="channel">
-      <header>
-        <h3>Google Analytics</h3>
-        <p class="when">22 Oct to 19 Nov 2026, from kickoff to the day before this report.</p>
-      </header>
-      <div class="kv">
-        <div><b>201</b><span>Users</span></div>
-        <div><b>274</b><span>Sessions</span></div>
-        <div><b>35.04%</b><span>Engagement rate</span></div>
-        <div><b>19</b><span>Key events in total</span></div>
+<section id="search">
+  <div class="wrap">
+    <h2>Search and visits</h2>
+    <p class="sub">Google Search Console 26 Oct to 17 Nov. Analytics 22 Oct to 19 Nov. Clarity 30 days to 19 Nov.</p>
+    <div class="stats">
+      <div class="stat"><b>1,490</b><span>Google impressions, 119 search phrases</span></div>
+      <div class="stat"><b>26</b><span>clicks from Google search</span></div>
+      <div class="stat"><b>201</b><span>visitors, 274 visits</span></div>
+      <div class="stat"><b>20</b><span>taps to phone (10) or WhatsApp (10) the practice</span></div>
+    </div>
+    <div class="cards">
+      <div class="card key">
+        <h3>Google search</h3>
+        <ul>
+          <li>Daily impressions rose from <b>about 20 to 60</b> before 7 Nov to <b>about 150 to 180</b> by mid November.</li>
+          <li>Average position <b>2.1</b> for "aviation medical examiner johannesburg".</li>
+          <li><b>2.5</b> for "sacaa medical examiners", <b>4.3</b> for "class 4 medical certificate" (last 7 days).</li>
+          <li>76 visits came from free Google search.</li>
+        </ul>
       </div>
-      <div class="kv three">
-        <div><b>119</b><span>Direct sessions</span></div>
-        <div><b>77</b><span>Paid search sessions</span></div>
-        <div><b>76</b><span>Organic search sessions</span></div>
+      <div class="card">
+        <h3>Visitors on the site</h3>
+        <ul>
+          <li>Engaged visits rose from <b>30.7% to 48.5%</b> week on week (to 18 Nov).</li>
+          <li>61% of visits are on a phone (last 7 days, Clarity).</li>
+          <li>0% rage clicks, Clarity performance score 91 (last 7 days).</li>
+          <li>Visits: 119 direct, 77 from ads, 76 from Google search.</li>
+        </ul>
       </div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Recorded events in the same period: 10 phone clicks and 2 clicks on an external phone number; 10 WhatsApp clicks; 18 chat opens and 4 chat leads submitted; 35 taps on Book; 2 booking confirmed events and 1 booking submit; 1 contact form submit and 1 SACAA form submit; 2 directions clicks and 3 email clicks. Some of the late-October form and booking events were recorded during setup tests. The appointment counts in the bookings section are the better record of real diary activity.</p>
-      <p style="margin-top:10px;font-size:14px;color:var(--muted)">Week on week (12 to 18 Nov compared with 5 to 11 Nov, read 19 Nov): users 58 vs 61, sessions 68 vs 75. Engagement rose from 30.7% to 48.5%, and paid-visit engagement rose from 14.3% to 54.5%. Visit volume was slightly lower; the share of visits that were engaged was higher.</p>
-    </article>
-
-    <article class="channel">
-      <header>
-        <h3>Google Search Console</h3>
-        <p class="when">Non-www property, 26 Oct to 17 Nov 2026.</p>
-      </header>
-      <div class="kv">
-        <div><b>26</b><span>Clicks (CTR 1.7%)</span></div>
-        <div><b>1,490</b><span>Impressions, from 119 search queries</span></div>
-        <div><b>7.5</b><span>Average position over this period</span></div>
-        <div><b>19</b><span>Pages indexed on 19 Nov. Many newer pages were still being picked up</span></div>
-      </div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Daily impressions were flat at about 20 to 60 a day until around 7 Nov, then rose to about 150 to 180 a day by mid November. Average positions in this period: "aviation medical examiner johannesburg" 2.1, "sacaa medical examiners" 2.5, "class 4 medical certificate" 6.8 (4.3 over the last 7 days), "aviation medical" 7.1, and "class 2 medical certificate" 7.5. In the 7 days to 19 Nov there were 9 clicks and 895 impressions, at an average position of 7.2. Today's two articles were not yet in this snapshot.</p>
-    </article>
-
-    <article class="channel">
-      <header>
-        <h3>Microsoft Clarity</h3>
-        <p class="when">Last 30 days to 19 Nov 2026, human sessions only.</p>
-      </header>
-      <div class="kv">
-        <div><b>161</b><span>Human sessions (207 bot sessions were filtered out)</span></div>
-        <div><b>81</b><span>Unique users</span></div>
-        <div><b>86</b><span>Clarity performance score over 30 days (91 in the last 7 days)</span></div>
-        <div><b>0%</b><span>Rage clicks</span></div>
-      </div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">In the 7 days to 19 Nov there were 41 sessions, and 61% of those were on a phone. SiteGuru site health was 89% at the last check used here.</p>
-    </article>
+    </div>
   </div>
 </section>
 
 <section id="ads">
   <div class="wrap">
     <h2>Google Ads</h2>
-    <p class="intro">Search ads for the practice have been live since 2 Nov 2026. The current budget is R55 a day. The totals below cover 23 Oct to 20 Nov 2026 (Africa/Johannesburg).</p>
-    <article class="channel">
-      <header>
-        <h3>Aviation medical examiner campaign</h3>
-        <p class="when">23 Oct to 20 Nov 2026. Account 551-444-2443.</p>
-      </header>
-      <div class="kv">
-        <div><b>235</b><span>Impressions</span></div>
-        <div><b>25</b><span>Clicks (CTR 10.64%)</span></div>
-        <div><b>R554.08</b><span>Spend</span></div>
-        <div><b>R22.16</b><span>Average cost per click, and 1 conversion recorded in Ads</span></div>
-      </div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">The competitor campaign in the same account is paused, with no spend. In the shorter 10 to 18 Nov window, read on 19 Nov, there were 214 impressions, 22 clicks and R511.46 spend, at an average of R23.25 a click, and 68% of those clicks were on a phone. Ads recorded 0 conversions in that shorter window. Phone clicks and bookings in the same period also appear in Analytics, so the two systems should not be read as the same thing.</p>
-    </article>
-  </div>
-</section>
-
-<section id="bookings">
-  <div class="wrap">
-    <h2>Patient bookings in aCc</h2>
-    <p class="intro">The old website booking system had 1 booking when work started. That booking was moved into aCc on 28 Oct 2026 and remains on the diary (25 Nov 2026). The four public calendars went live on 28 Oct 2026. The counts below were read from aCc on 20 Nov 2026, Africa/Johannesburg. They are counts only: no names, and no clinical details.</p>
+    <p class="sub">Aviation medical examiner campaign, Gauteng. Live since 2 Nov, totals to 20 Nov 2026.</p>
     <div class="stats">
-      <div class="stat"><b>18</b><span>Confirmed appointments in aCc</span><em>Including the 1 booking moved across from the old system</em></div>
-      <div class="stat"><b>17</b><span>New appointments since aCc went live</span><em>All 17 were added by the practice in aCc, after a call or at reception</em></div>
-      <div class="stat"><b>11</b><span>Different contacts with an appointment</span><em>10 new, plus the 1 moved across</em></div>
-      <div class="stat"><b>0</b><span>Online self-serve bookings found in this pull</span><em>The public booking page is live; these 17 were entered on the appointments or calendar screen</em></div>
+      <div class="stat"><b>R554</b><span>total spend to date</span></div>
+      <div class="stat"><b>25</b><span>clicks to the website</span></div>
+      <div class="stat"><b>10.6%</b><span>of people who saw an ad clicked it</span></div>
+      <div class="stat"><b>R22</b><span>average cost per click</span></div>
     </div>
-    <div class="cards">
+    <div class="cards one">
       <div class="card">
-        <h3>By calendar</h3>
         <ul>
-          <li>Class II, first medical: 7 appointments (6 new, plus the 1 moved across).</li>
-          <li>Class II or IV renewal: 2 appointments.</li>
-          <li>Class IV (cabin crew and recreational): 8 appointments. Six of those eight sit on one contact, which is consistent with a group booking.</li>
-          <li>GP or occupational: 1 appointment. That contact first arrived through the website WhatsApp widget, and the appointment was then added in aCc.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Contacts in aCc</h3>
-        <ul>
-          <li>23 contacts in total, as at 20 Nov 2026.</li>
-          <li>This total includes setup and test records from late October (1 tagged as a test, 2 tagged as the agreement signer, and form tests from the booking switch).</li>
-          <li>9 contacts are typed as customer, which is how aCc usually records someone once a booking is added.</li>
-          <li>8 contacts have the website WhatsApp widget as their source.</li>
-          <li>2 contacts started the online SACAA form (1 completed it on 27 Oct during setup; 1 started it on 11 Nov).</li>
-          <li>1 further customer, added on 18 Nov, has no appointment on the four public calendars in this pull.</li>
+          <li>Ads reach people searching for aviation medicals right now, on a small R55 a day budget.</li>
+          <li>Visits from ads became more engaged: <b>14.3% to 54.5%</b> week on week.</li>
+          <li>68% of ad clicks are on a phone (10 to 18 Nov), which is why the mobile layout comes first.</li>
         </ul>
       </div>
     </div>
-    <p class="note">Every appointment in this pull has the status confirmed. Cancelled or no-show records are not in these totals if the calendar did not return them. Appointments were not created through the public online widget in this set; they were added by the practice team in aCc, which matches bookings taken by phone or at reception.</p>
   </div>
 </section>
 
 <section id="partners">
   <div class="wrap">
-    <h2>Partnerships and outreach</h2>
-    <p class="intro">Schools and operators are a direct route to student and crew medicals. The website now has a page they can use, and one school arrangement is already in place.</p>
-    <div class="cards">
-      <div class="card">
-        <h3>RPAS drone school</h3>
-        <p>An RPAS (drone) school has agreed to send its students to the practice. This was confirmed on 19 Nov 2026. A public article on RPAS medicals is still held, because the practice issues Class 2 and Class 4 medicals, and the Class 3 position for drone pilots is still being confirmed against SACAA rules.</p>
-      </div>
-      <div class="card">
-        <h3>Flight schools and Closely</h3>
-        <p>The flight schools page and student handout went live on 18 Nov 2026. LinkedIn outreach through Closely has been running since 23 Oct 2026.</p>
-      </div>
+    <h2>Schools and outreach</h2>
+    <p class="sub">A direct route to student pilots, drone pilots and cabin crew.</p>
+    <div class="stats">
+      <div class="stat"><b>1</b><span>drone (RPAS) school agreed to send its students</span></div>
+      <div class="stat"><b>85</b><span>LinkedIn requests to schools and crew managers</span></div>
+      <div class="stat"><b>10</b><span>new LinkedIn connections (11.8% accepted)</span></div>
+      <div class="stat"><b>3</b><span>replies so far</span></div>
     </div>
-    <article class="channel">
-      <header>
-        <h3>Closely, all time since 23 Oct 2026</h3>
-        <p class="when">92 prospects in total.</p>
-      </header>
-      <div class="kv">
-        <div><b>85</b><span>Connection requests sent</span></div>
-        <div><b>10</b><span>Accepted (11.8%)</span></div>
-        <div><b>8</b><span>Messages sent after a connection</span></div>
-        <div><b>3</b><span>Replies</span></div>
-      </div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Flight schools in Gauteng: 44 prospects, 37 requests sent, 5 accepted, 2 replies. Cabin crew and airline crew managers: 48 prospects, 48 requests sent, 5 accepted, 1 reply.</p>
-    </article>
-  </div>
-</section>
-
-<section id="today">
-  <div class="wrap">
-    <h2>Today, 20 Nov 2026</h2>
-    <p class="intro">These are the website changes going live with this report, on top of the work already on the site.</p>
-    <div class="cards">
+    <div class="cards one">
       <div class="card">
-        <h3>Pilot with asthma</h3>
-        <p>A new guide answering "can you be a pilot with asthma", including the lung function test done in the practice. Approved earlier, and included in today's live batch.</p>
-      </div>
-      <div class="card">
-        <h3>Pilot hearing test</h3>
-        <p>A new guide on what the SACAA hearing test involves, and what happens if hearing is not perfect. Written 20 Nov, approved the same day, and included in today's live batch. It points people with a cold or blocked ears to phone 011 568 7979 before they travel in.</p>
-      </div>
-    </div>
-    <p class="note">After the upload, both articles are added to the sitemap (46 URLs in total) and submitted for indexing. They were not yet in the 26 Oct to 17 Nov Search Console figures above.</p>
-  </div>
-</section>
-
-<section id="next">
-  <div class="wrap">
-    <h2>Next steps</h2>
-    <p class="intro">A short list of what is already approved, what is waiting for a decision, and what is still outstanding.</p>
-    <div class="cards three">
-      <div class="card">
-        <h3>Already in motion</h3>
         <ul>
-          <li>Weekday articles continue, one at a time, for review before they go live.</li>
-          <li>Resubmit the sitemap and request indexing for the new articles and the flight schools page.</li>
-          <li>Add the approved Class II headlines, logo and image assets in Google Ads.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Waiting for a decision</h3>
-        <ul>
-          <li>Block PrDP and occupational searches in the aviation ads (a saving of about R50 a week, if approved).</li>
-          <li>Fix 14 Google titles and descriptions flagged by SiteGuru, on a preview first.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Still outstanding</h3>
-        <ul>
-          <li>Google Business Profile verification, which also holds public review requests.</li>
-          <li>An RPAS article, once the Class 3 position for drone pilots is settled.</li>
+          <li>Drone school arrangement confirmed 19 Nov 2026.</li>
+          <li>Flight schools page and student handout live 18 Nov, so schools have one link to share.</li>
+          <li>LinkedIn outreach (Closely) since 23 Oct: 44 Gauteng flight schools and 48 cabin and airline crew managers.</li>
         </ul>
       </div>
     </div>
@@ -444,9 +344,14 @@ footer p{margin:0 0 8px;max-width:46rem}
 </main>
 <footer>
   <div class="wrap">
-    <p>Prepared by Ads Creation Centre for Dr A.O. Ndhlovu, ClinoTrend Health and Aviation. Private page, not for publication, and not for use as advertising. No patient names or clinical data are included.</p>
-    <p>Times are Africa/Johannesburg (UTC+2). Analytics covers 22 Oct to 19 Nov 2026. Search Console covers the non-www property from 26 Oct to 17 Nov 2026, with a 7-day check read on 19 Nov. Clarity covers the 30 days to 19 Nov. Google Ads totals cover 23 Oct to 20 Nov 2026. Closely totals run from 23 Oct 2026. Appointment and contact counts were read from aCc on 20 Nov 2026. The website baseline was recorded on 22 to 26 Oct 2026 and is filed at <a href="https://proposals.acreationc.com/clinotrend/compare/#baseline">proposals.acreationc.com/clinotrend/compare/#baseline</a>.</p>
-    <p>This page is noindex. Starting point: 22 Oct 2026. Report date: 20 Nov 2026.</p>
+    <p><strong>Sources</strong></p>
+    <ul>
+      <li>Bookings: aCc, all ClinoTrend calendars, read 20 Nov 2026.</li>
+      <li>Google Analytics 22 Oct to 19 Nov. Search Console (non-www) 26 Oct to 17 Nov. Clarity 30 days to 19 Nov, bot visits removed.</li>
+      <li>Google Ads account 551-444-2443, totals to 20 Nov. Closely totals since 23 Oct.</li>
+      <li>Starting point: <a href="https://proposals.acreationc.com/clinotrend/compare/#baseline">baseline page</a>, recorded 22 to 26 Oct 2026, same lab speed method.</li>
+    </ul>
+    <p>Prepared by Ads Creation Centre for Dr A.O. Ndhlovu, ClinoTrend Health and Aviation. Private page, not for publication or advertising. No patient names or clinical data. Times are Africa/Johannesburg (UTC+2).</p>
   </div>
 </footer>
 </body>
