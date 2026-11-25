@@ -78,6 +78,30 @@ h3{font-family:var(--display);font-weight:700;font-size:1rem;margin:0 0 8px}
 .stat b{display:block;font-family:var(--display);font-size:1.5rem;font-weight:800;letter-spacing:-.03em;line-height:1.1}
 .stat span{display:block;margin-top:3px;font-size:13px;color:var(--muted)}
 
+/* gbp chart & table */
+.gbp-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:0 0 10px}
+.gbp-legend span{display:inline-flex;align-items:center;gap:6px;font-weight:600}
+.gbp-dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+.gbp-dot.int{background:var(--mint)}
+.gbp-dot.cal{background:var(--ink2)}
+.gbp-chart{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;align-items:end;padding:18px 6px 6px;border-bottom:1px solid var(--line)}
+.gbp-col{display:flex;flex-direction:column;align-items:center;gap:6px}
+.gbp-bars{display:flex;align-items:flex-end;justify-content:center;gap:4px;height:124px;width:100%}
+.gbp-bar{flex:0 1 16px;min-width:10px;border-radius:5px 5px 0 0;position:relative;display:flex;justify-content:center}
+.gbp-bar.int{background:var(--mint)}
+.gbp-bar.cal{background:var(--ink2)}
+.gbp-bar b{position:absolute;bottom:100%;margin-bottom:2px;font-size:11px;font-weight:700;color:var(--ink);line-height:1}
+.gbp-mo{font-size:12px;font-weight:600;color:var(--muted)}
+.gbp-note{font-size:12px;color:var(--muted);margin-top:8px}
+.tbl-wrap{overflow-x:auto}
+table.gbp-tbl{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+table.gbp-tbl th,table.gbp-tbl td{padding:7px 6px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+table.gbp-tbl th:first-child,table.gbp-tbl td:first-child{text-align:left;padding-left:0}
+table.gbp-tbl th:last-child,table.gbp-tbl td:last-child{padding-right:0}
+table.gbp-tbl th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700}
+table.gbp-tbl tr.tot td{font-weight:700;border-bottom:0;border-top:2px solid var(--line);color:var(--ink)}
+table.gbp-tbl tr.nov td{background:var(--goodbg);font-weight:600}
+
 /* cards and bullets */
 .cards{display:grid;gap:12px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:15px 16px}
@@ -132,7 +156,8 @@ footer li{margin:3px 0}
       <div class="top-meta">
         <strong>Private progress report</strong>
         For Dr A.O. Ndhlovu<br>
-        22 Oct to 20 Nov 2026
+        22 Oct to 20 Nov 2026<br>
+        GBP updated 25 Nov 2026
       </div>
     </div>
     <div class="hero">
@@ -157,6 +182,7 @@ footer li{margin:3px 0}
     <a href="#bookings">Bookings</a>
     <a href="#search">Search and visits</a>
     <a href="#ads">Google Ads</a>
+    <a href="#gbp">Google profile</a>
     <a href="#partners">Schools and outreach</a>
     <a href="#next">Next 30 days</a>
   </div>
@@ -176,7 +202,7 @@ footer li{margin:3px 0}
       <div class="bn-row"><div class="bn-k">Tracking</div><div class="bn-b">None working (placeholder tag)</div><div class="bn-n">Analytics, Clarity, Search Console and Ads</div></div>
       <div class="bn-row"><div class="bn-k">Mobile speed score (lab)</div><div class="bn-b">62, page of 6,385 KB</div><div class="bn-n">78 (18 Nov), page cut to 705 KB</div></div>
       <div class="bn-row"><div class="bn-k">WhatsApp link</div><div class="bn-b">Broken number format</div><div class="bn-n">Working chat widget</div></div>
-      <div class="bn-row"><div class="bn-k">Google Business Profile</div><div class="bn-b">No description, 0 services, 3 photos</div><div class="bn-n">Description, hours, 11 services, new photos</div></div>
+      <div class="bn-row"><div class="bn-k">Google Business Profile</div><div class="bn-b">No description, 0 services, 3 photos</div><div class="bn-n">Verified (25 Nov); description, hours, 11 services, new photos</div></div>
     </div>
   </div>
 </section>
@@ -324,6 +350,109 @@ footer li{margin:3px 0}
   </div>
 </section>
 
+
+<section id="gbp">
+  <div class="wrap">
+    <h2>Google Business Profile</h2>
+    <p class="sub">Verified 25 Nov 2026. Monthly performance from Jun to Nov 2026 (Nov is to date; Google's 6-month view starts in Jun).</p>
+    <div class="stats">
+      <div class="stat"><b>11</b><span>calls in Nov so far (was 3 in Sep, 0 in Oct)</span></div>
+      <div class="stat"><b>45</b><span>interactions in Nov so far (374 Jun to Nov)</span></div>
+      <div class="stat"><b>819</b><span>profile views, Jun to Nov (68% mobile)</span></div>
+      <div class="stat"><b>3</b><span>chat clicks started (1 in Oct, 2 in Nov)</span></div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Calls and interactions by month</h3>
+        <div class="gbp-legend">
+          <span><i class="gbp-dot cal"></i>Calls</span>
+          <span><i class="gbp-dot int"></i>Total interactions</span>
+        </div>
+        <div class="gbp-chart" role="img" aria-label="Monthly calls and total interactions from June to November 2026">
+          <div class="gbp-col">
+            <div class="gbp-bars">
+              <div class="gbp-bar cal" style="height:9%"><b>9</b></div>
+              <div class="gbp-bar int" style="height:53%"><b>53</b></div>
+            </div>
+            <span class="gbp-mo">Jun</span>
+          </div>
+          <div class="gbp-col">
+            <div class="gbp-bars">
+              <div class="gbp-bar cal" style="height:23%"><b>23</b></div>
+              <div class="gbp-bar int" style="height:100%"><b>100</b></div>
+            </div>
+            <span class="gbp-mo">Jul</span>
+          </div>
+          <div class="gbp-col">
+            <div class="gbp-bars">
+              <div class="gbp-bar cal" style="height:11%"><b>11</b></div>
+              <div class="gbp-bar int" style="height:56%"><b>56</b></div>
+            </div>
+            <span class="gbp-mo">Aug</span>
+          </div>
+          <div class="gbp-col">
+            <div class="gbp-bars">
+              <div class="gbp-bar cal" style="height:3%"><b>3</b></div>
+              <div class="gbp-bar int" style="height:68%"><b>68</b></div>
+            </div>
+            <span class="gbp-mo">Sep</span>
+          </div>
+          <div class="gbp-col">
+            <div class="gbp-bars">
+              <div class="gbp-bar cal" style="height:0%"><b>0</b></div>
+              <div class="gbp-bar int" style="height:52%"><b>52</b></div>
+            </div>
+            <span class="gbp-mo">Oct</span>
+          </div>
+          <div class="gbp-col">
+            <div class="gbp-bars">
+              <div class="gbp-bar cal" style="height:11%"><b>11</b></div>
+              <div class="gbp-bar int" style="height:45%"><b>45</b></div>
+            </div>
+            <span class="gbp-mo">Nov*</span>
+          </div>
+        </div>
+        <p class="gbp-note">*Nov is month to date (read 25 Nov; Google data lags a few days).</p>
+      </div>
+      <div class="card">
+        <h3>Monthly breakdown</h3>
+        <div class="tbl-wrap">
+          <table class="gbp-tbl">
+            <thead>
+              <tr><th>Month</th><th>Calls</th><th>Dirs</th><th>Web</th><th>Chat</th><th>Total</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Jun</td><td>9</td><td>44</td><td>0</td><td>0</td><td>53</td></tr>
+              <tr><td>Jul</td><td>23</td><td>67</td><td>10</td><td>0</td><td>100</td></tr>
+              <tr><td>Aug</td><td>11</td><td>43</td><td>2</td><td>0</td><td>56</td></tr>
+              <tr><td>Sep</td><td>3</td><td>62</td><td>3</td><td>0</td><td>68</td></tr>
+              <tr><td>Oct</td><td>0</td><td>50</td><td>1</td><td>1</td><td>52</td></tr>
+              <tr class="nov"><td>Nov*</td><td>11</td><td>31</td><td>1</td><td>2</td><td>45</td></tr>
+              <tr class="tot"><td>Total</td><td>57</td><td>297</td><td>17</td><td>3</td><td>374</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="gbp-note">Google bookings stayed 0 every month. *Nov is month to date.</p>
+      </div>
+    </div>
+    <div class="cards one" style="margin-top:12px">
+      <div class="card key">
+        <ul>
+          <li><b>Calls and chat:</b> Calls went from 3 in Sep and 0 in Oct to 11 so far in Nov, and the first chat clicks started (1 in Oct, 2 in Nov). Direction requests are lower in Nov (31 vs 50 in Oct), though Nov is not finished and Google data lags a few days.</li>
+          <li><b>Views and searches:</b> 819 people viewed the profile from Jun to Nov (Search mobile 399, Maps mobile 161, Search desktop 153, Maps desktop 106). Under 50 searches showed the profile; top terms (each under 15) were <i>aviation doctor grand central</i>, <i>aviation doctor midrand</i>, <i>aviation doctor near me</i>, <i>aviation dr</i> and <i>clinotrend</i>.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="why">
+      <strong>Early read</strong>
+      <ul>
+        <li>ACC started around 26 Oct 2026 (May to Oct baseline: 352 interactions, 49 calls, 288 directions, 15 website clicks, 759 views).</li>
+        <li>The profile was unverified until 25 Nov 2026, which limited what Google displayed, so the coming months will be the real test.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <section id="partners">
   <div class="wrap">
     <h2>Schools and outreach</h2>
@@ -371,7 +500,7 @@ footer li{margin:3px 0}
         <ul>
           <li>Daily check of traffic and speed (Analytics, Search Console, Clarity, PageSpeed), with fixes when something drops.</li>
           <li>Google Ads: weekly search term review, irrelevant searches blocked, budget stays R55 a day.</li>
-          <li>Google Business Profile verification, then review requests after visits.</li>
+          <li>Google Business Profile verified (25 Nov); review requests after visits can now start.</li>
         </ul>
       </div>
       <div class="card">
@@ -427,6 +556,7 @@ footer li{margin:3px 0}
       <li>Bookings: aCc, all ClinoTrend calendars, read 20 Nov 2026.</li>
       <li>Google Analytics 22 Oct to 19 Nov. Search Console (non-www) 26 Oct to 17 Nov. Clarity 30 days to 19 Nov, bot visits removed.</li>
       <li>Google Ads account 551-444-2443, totals to 20 Nov. Closely totals since 23 Oct.</li>
+      <li>Google Business Profile: Performance panel, Jun to Nov 2026, read 25 Nov 2026 after verification (May to Oct baseline read 26 Oct 2026).</li>
       <li>Starting point: <a href="https://proposals.acreationc.com/clinotrend/compare/#baseline">baseline page</a>, recorded 22 to 26 Oct 2026, same lab speed method.</li>
     </ul>
     <p>Prepared by Ads Creation Centre for Dr A.O. Ndhlovu, ClinoTrend Health and Aviation. Private page, not for publication or advertising. No patient names or clinical data. Times are Africa/Johannesburg (UTC+2).</p>
