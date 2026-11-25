@@ -29,8 +29,8 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-f
 .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--h);font-weight:700;font-size:15px;text-decoration:none}
 .brand img{width:40px;height:40px;border-radius:8px}
-.brand small{display:block;font-family:var(--b);font-weight:500;font-size:11px;color:var(--mut2)}
-.links{display:flex;gap:14px;font-size:13px;font-weight:600;color:var(--mut)}
+.brand small{display:block;white-space:nowrap;font-family:var(--b);font-weight:500;font-size:11px;color:var(--mut2)}
+.links{display:flex;gap:12px;font-size:13px;font-weight:600;color:var(--mut)}
 .links a{white-space:nowrap;text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
 .links a:hover{color:var(--k);border-bottom-color:var(--y)}
 .btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:13px 22px;font-weight:700;font-size:15px;border:0;cursor:pointer;text-decoration:none;transition:transform .2s}
@@ -127,6 +127,26 @@ section.tint{background:var(--g1)}
 .leak .x small{display:inline-block;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;background:var(--y);color:var(--k);padding:3px 9px;border-radius:999px;margin-bottom:6px}
 .leak .x p{font-size:14.5px}
 /* takeaways */
+.bars{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;align-items:end;height:150px;margin-top:10px}
+.bar{display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;height:100%;text-align:center}
+.bar i{display:block;height:var(--h);background:var(--k);border-radius:6px 6px 0 0;min-height:3px}
+.bar.in i{background:var(--y);box-shadow:inset 0 0 0 2px var(--k)}
+.bar em{font-style:normal;font-size:11px;color:var(--mut2);margin-bottom:3px}
+.bar span{font-size:11.5px;font-weight:700;margin-top:5px}
+.chart{border:1px solid var(--line);border-radius:16px;padding:18px 18px 14px;background:var(--w)}
+.chart h4{font-family:var(--h);font-size:15px;margin-bottom:2px}
+.chart p{font-size:13px;color:var(--mut2)}
+.road{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.phase{border:1px solid var(--line);border-radius:18px;padding:24px;background:var(--w);position:relative}
+.phase:before{content:"";position:absolute;left:24px;top:0;width:56px;height:5px;background:var(--y);border-radius:0 0 4px 4px}
+.phase .wk{font-family:var(--h);font-weight:800;font-size:13px;letter-spacing:1.2px;text-transform:uppercase;color:var(--mut2)}
+.phase h3{margin-top:6px}
+.phase ul{list-style:none;margin-top:10px}
+.phase li{font-size:14.5px;color:var(--mut);padding:8px 0 8px 0;border-top:1px solid var(--line)}
+.phase li b{color:var(--k)}
+.phase li small{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.4px;background:var(--g2);color:var(--k);border-radius:999px;padding:1px 8px;margin-left:6px}
+@media(max-width:980px){.road{grid-template-columns:1fr}}
+@media(max-width:640px){.bars{gap:3px;height:120px}.bar span{font-size:10px}.bar em{font-size:9.5px}}
 .take{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:26px}
 .take .card h3{font-size:17.5px}
 .take .card{border-top:4px solid var(--k)}
@@ -178,6 +198,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
     <a href="#visibility">Visibility</a>
     <a href="#ai">AI</a>
     <a href="#priorities">Priorities</a>
+    <a href="#work">Plan</a>
     <a href="#next">Next</a>
   </div>
   <a class="btn btn-y" href="https://wa.me/27823478094" target="_blank" rel="noopener">Talk with Ruben on WhatsApp</a>
@@ -196,6 +217,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
       <span><b>6</b> campuses compared</span>
       <span><b>15</b> UAE searches checked</span>
       <span><b>4</b> ad libraries reviewed</span>
+      <span><b>7</b> agent and listing sites checked</span>
       <span><b>7</b> AI assistants tested</span>
       <span><b>22</b> PageSpeed tests</span>
       <span>Data captured <b>24 and 25 Nov 2026</b></span>
@@ -203,7 +225,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
   </div>
   <div class="panel">
     <h3>Three numbers to start the conversation</h3>
-    <div class="stat"><b>0</b><p>replies from Murdoch in the ~16.5 hours after our parent enquiry on 24 Nov. Curtin, Heriot-Watt and UOWD emailed within 14 minutes.</p></div>
+    <div class="stat"><b>0</b><p>replies from Murdoch to our parent enquiry on 24 Nov: no email at our last inbox check, and no call or WhatsApp as of 25 Nov afternoon (~22 hours). Curtin, Heriot-Watt and UOWD emailed within 14 minutes.</p></div>
     <div class="stat"><b>0</b><p>LinkedIn ads found for Murdoch. UOWD (172), Middlesex (120) and Heriot-Watt (273) all advertise there (all-time library counts).</p></div>
     <div class="stat"><b>211</b><p>Google reviews for Murdoch, the fewest of the six campuses, even with a strong 4.3 star rating. UOWD has 684 and Middlesex 609.</p></div>
   </div>
@@ -217,7 +239,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
     <div class="gcard">
       <div class="lbl">Speed to lead</div>
       <div class="n">0 of 5</div>
-      <p>campuses called or sent a WhatsApp in the first ~16.5 hours after a parent enquiry asking for WhatsApp. Murdoch showed no confirmation and sent no email. The first campus to reply instantly on WhatsApp leads the whole peer set.</p>
+      <p>campuses called or sent a WhatsApp as of 25 Nov afternoon, about 22 hours after a parent enquiry asking for WhatsApp. Murdoch showed no confirmation and sent no email by our last inbox check. The first campus to reply straight away on WhatsApp leads the whole peer set.</p>
       <div class="src">Section 4, mystery shop</div>
     </div>
     <div class="gcard">
@@ -235,8 +257,8 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
     <div class="gcard">
       <div class="lbl">Reputation</div>
       <div class="n">4.3 / 211</div>
-      <p>Google rating and review count. The rating is joint second in the set, but review volume is the lowest. Third-party sites parents use show out-of-date Murdoch fees and ratings.</p>
-      <div class="src">Section 6, reviews and listings</div>
+      <p>Google rating and review count. The rating is joint second in the set, but review volume is the lowest. None of the six agent and listing sites that show a Murdoch fee has the 2027 figure.</p>
+      <div class="src">Section 6, reviews and agent channel</div>
     </div>
     <div class="gcard">
       <div class="lbl">Site speed</div>
@@ -259,6 +281,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
       <li>#1 result for "MBA Dubai" and #2 for "foundation programme Dubai" in our search check</li>
       <li>4.3 Google rating, ahead of UOWD, De Montfort and Heriot-Watt</li>
       <li>Mature consent set-up (TrustArc with Google Consent Mode signals)</li>
+      <li>UAE search interest in "Murdoch University Dubai" is about 2.4 times its 2022 level (Google Trends, 2026 so far)</li>
       <li>2027 undergraduate fee (AED 61,160 per year) sits right in the band of UOWD, Curtin, Middlesex and De Montfort (AED 60,900 to 64,557)</li>
     </ul>
   </div>
@@ -333,7 +356,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
   <div class="g4" style="margin-top:26px">
     <div class="kpi"><b>19:35 to 19:50</b><span>UAE submit window on 24 Nov 2026 (17:35 to 17:50 SAST)</span></div>
     <div class="kpi"><b>3 of 5</b><span>sent an email within 14 minutes (Curtin, Heriot-Watt, UOWD)</span></div>
-    <div class="kpi"><b>0 of 5</b><span>called or messaged on WhatsApp in the first ~16.5 hours</span></div>
+    <div class="kpi"><b>0 of 5</b><span>called or messaged on WhatsApp as of 25 Nov afternoon (~22 hours)</span></div>
     <div class="kpi"><b>Fastest win</b><span>Confirmation, instant email and WhatsApp put Murdoch ahead of every peer</span></div>
   </div>
   <div class="tbl-wrap">
@@ -344,9 +367,24 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
   </div>
   <div class="card" style="margin-top:18px">
     <h3>How to read this kindly</h3>
-    <p>This is not about blaming an admissions desk for evening timing. Every one of the five campuses missed phone and WhatsApp follow-up over the first ~16.5 hours, even when WhatsApp was requested. Fixing Murdoch's silent Contact form confirmation and turning on an immediate, warm email plus consented WhatsApp reply would move Murdoch from behind Curtin and UOWD to the front of this peer group on the measures we tested.</p>
+    <p>This is not about blaming an admissions desk for evening timing. As of 25 Nov afternoon, about 22 hours after the enquiry, none of the five campuses had called or sent a WhatsApp, even though WhatsApp was requested. Fixing Murdoch's silent Contact form confirmation and turning on an immediate, warm email plus consented WhatsApp reply would move Murdoch from behind Curtin and UOWD to the front of this peer group on the measures we tested.</p>
   </div>
   <p class="note" id="mystery-footnote"></p>
+
+  <div class="subhead"><h3>Open Day and events funnel</h3><span>Public pages, 24 and 25 Nov 2026. We did not register for any event.</span></div>
+  <div class="tbl-wrap">
+    <table class="tbl">
+      <thead><tr><th>Campus</th><th>Where families register</th><th>What the form asks</th><th>After registering</th><th>Housekeeping</th></tr></thead>
+      <tbody>
+        <tr><td class="me"><b>Murdoch</b></td><td class="me">Open Day page with a Marketo form. Monthly Open Days listed from 11 Dec 2026 to 8 May 2027</td><td class="me">Does not ask whether a parent or student is registering</td><td class="me">"An Admissions Counsellor will contact you" plus social links. No calendar add or WhatsApp seen</td><td class="me">Picklist still offered past dates (June to 14 Nov 2026) and a "21th August" typo. Campus tour page has no booking</td></tr>
+        <tr><td><b>UOWD</b></td><td>Dedicated Open Day landing page. Open Day 5 Dec 2026, Abu Dhabi Open Day 30 Jan 2027</td><td>Course, preferred location and session, email opt in</td><td class="muted">Not seen</td><td>474 event URLs in its sitemap, many of them past events</td></tr>
+        <tr><td><b>Curtin</b></td><td>Open Day form on site; on-campus "Experience Curtin" and virtual "Ask Curtin"</td><td>Requires Student, Parent or Agent, plus agency name, course, nationality and start date</td><td class="muted">Not seen</td><td></td></tr>
+        <tr><td><b>Middlesex</b></td><td>Bookable campus tour with a date and time picker; virtual country sessions streamed on YouTube</td><td>Programme, intake, nationality, country and appointment slot</td><td class="muted">Not seen</td><td>Past event pages stay in its sitemap (for example a 2022 India session)</td></tr>
+        <tr><td><b>Heriot-Watt</b></td><td>Ticketed Open Days on Eventbrite, including 8 Dec 2026</td><td>Eventbrite ticket fields</td><td class="muted">Not seen</td><td>A 21 Nov 2026 event page had already passed</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Takeaway: Murdoch already runs a monthly Open Day calendar, which is a strong base. The funnel stops at a "we will contact you" page. Curtin asks who is coming and Middlesex lets families pick a slot. We could not see reminder emails or messages without registering, so we have not claimed them for anyone. The fix is to ask parent or student, add a calendar invite, and send consented WhatsApp reminders the day before and on the day, with a follow-up after.</p>
 </div></section>
 
 <section id="competitors"><div class="wrap">
@@ -388,7 +426,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
     <table class="tbl score">
       <thead><tr><th>Channel</th><th class="me">Murdoch</th><th>UOWD</th><th>Curtin</th><th>Middlesex</th><th>De Montfort</th><th>Heriot-Watt</th></tr></thead>
       <tbody>
-        <tr><td><b>First reply to parent enquiry</b></td><td class="me">None in ~16.5 h<br><span class="pill p-gap">Behind</span></td><td>~14 min email</td><td>~1 min email</td><td>None in ~16.5 h</td><td class="muted">Not tested</td><td>Same minute (blank name)</td></tr>
+        <tr><td><b>First reply to parent enquiry</b></td><td class="me">No email at last check; no call or WhatsApp in ~22 h<br><span class="pill p-gap">Behind</span></td><td>~14 min email</td><td>~1 min email</td><td>No email at last check; no call or WhatsApp in ~22 h</td><td class="muted">Not tested</td><td>Same minute (blank name)</td></tr>
         <tr><td><b>Google rating (reviews)</b></td><td class="me">4.3 (211)<br><span class="pill p-par">Rating on par, fewest reviews</span></td><td>4.2 (684)</td><td>4.5 (236)</td><td>4.3 (609)</td><td>4.2 (215)</td><td>4.1 (529)</td></tr>
         <tr><td><b>Google ads (UAE library)</b></td><td class="me">61<br><span class="pill p-gap">Behind</span></td><td>76</td><td>~300</td><td>~400</td><td>0 found</td><td>89 *</td></tr>
         <tr><td><b>Meta ads (active)</b></td><td class="me">Active, ~41 results<br><span class="pill p-par">On par</span></td><td>Many active</td><td>Active, ~30</td><td>Active, ~79</td><td>Active, ~35</td><td>Active, ~45</td></tr>
@@ -400,6 +438,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
         <tr><td><b>X: last post</b></td><td class="me">Aug 2023<br><span class="pill p-gap">Behind</span></td><td>24 Nov 2026</td><td>Jun 2026</td><td>25 Nov 2026</td><td>Jul 2026</td><td>24 Nov 2026</td></tr>
         <tr><td><b>Site content (sitemap URLs)</b></td><td class="me">133 pages, 12 articles<br><span class="pill p-gap">Behind</span></td><td>2,355</td><td>442</td><td>3,680</td><td>81 Dubai URLs</td><td>587 Dubai URLs</td></tr>
         <tr><td><b>Mobile homepage PageSpeed</b></td><td class="me">94<br><span class="pill p-lead">Leads</span></td><td>32</td><td>26</td><td>52</td><td>53</td><td>58</td></tr>
+        <tr><td><b>Arabic web pages</b></td><td class="me">None found<br><span class="pill p-gap">Behind</span></td><td>Language control on homepage; no Arabic URLs found</td><td>None found</td><td>7 Arabic pages</td><td>None found on Dubai pages</td><td class="muted">Not checked</td></tr>
         <tr><td><b>LinkedIn and TikTok pixels</b></td><td class="me">Neither<br><span class="pill p-gap">Behind</span></td><td>LinkedIn</td><td>LinkedIn</td><td>Both</td><td>Both ***</td><td>Both ***</td></tr>
       </tbody>
     </table>
@@ -422,6 +461,30 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
     </table>
   </div>
   <p class="note">Murdoch's ad messages we saw: "Affordable Business Degrees, 3 intakes Jan/May/Sep", "Communication Scholarships" (Google) and "up to 40% scholarship, three intakes a year" (Meta).</p>
+
+  <div class="subhead"><h3>Intake timing and demand</h3><span>Google Trends, UAE, weekly, 21 Nov 2021 to 28 Nov 2026, fetched 25 Nov 2026</span></div>
+  <div class="g4" style="margin-top:18px">
+    <div class="kpi"><b>Jan, Aug, May</b><span>the three strongest months for "university in dubai" searches in the UAE, each just before a Murdoch class start</span></div>
+    <div class="kpi"><b>August</b><span>peak month for "Murdoch University Dubai" searches, ahead of September trimester classes on 23 Aug</span></div>
+    <div class="kpi"><b>December</b><span>Murdoch's weakest search month, the month before January classes start on 11 Jan</span></div>
+    <div class="kpi"><b>2.4x</b><span>"Murdoch University Dubai" search interest in 2026 so far against 2022</span></div>
+  </div>
+  <div class="g2" style="margin-top:18px">
+    <div class="chart"><h4>"university in dubai": average by month</h4><p>Relative interest, 0 to 100. Yellow bars are months when Murdoch classes start (Jan, May, Aug).</p><div class="bars"><div class="bar in" style="--h:100%"><em>69</em><i></i><span>Jan</span></div><div class="bar" style="--h:94%"><em>65</em><i></i><span>Feb</span></div><div class="bar" style="--h:83%"><em>57</em><i></i><span>Mar</span></div><div class="bar" style="--h:84%"><em>58</em><i></i><span>Apr</span></div><div class="bar in" style="--h:96%"><em>66</em><i></i><span>May</span></div><div class="bar" style="--h:93%"><em>64</em><i></i><span>Jun</span></div><div class="bar" style="--h:88%"><em>61</em><i></i><span>Jul</span></div><div class="bar in" style="--h:99%"><em>68</em><i></i><span>Aug</span></div><div class="bar" style="--h:94%"><em>65</em><i></i><span>Sep</span></div><div class="bar" style="--h:80%"><em>55</em><i></i><span>Oct</span></div><div class="bar" style="--h:84%"><em>58</em><i></i><span>Nov</span></div><div class="bar" style="--h:83%"><em>57</em><i></i><span>Dec</span></div></div></div>
+    <div class="chart"><h4>"Murdoch University Dubai": average by month</h4><p>Same method, measured against other campus names, so the scale is lower.</p><div class="bars"><div class="bar in" style="--h:62%"><em>8</em><i></i><span>Jan</span></div><div class="bar" style="--h:62%"><em>8</em><i></i><span>Feb</span></div><div class="bar" style="--h:31%"><em>4</em><i></i><span>Mar</span></div><div class="bar" style="--h:38%"><em>5</em><i></i><span>Apr</span></div><div class="bar in" style="--h:69%"><em>9</em><i></i><span>May</span></div><div class="bar" style="--h:54%"><em>7</em><i></i><span>Jun</span></div><div class="bar" style="--h:54%"><em>7</em><i></i><span>Jul</span></div><div class="bar in" style="--h:100%"><em>13</em><i></i><span>Aug</span></div><div class="bar" style="--h:69%"><em>9</em><i></i><span>Sep</span></div><div class="bar" style="--h:46%"><em>6</em><i></i><span>Oct</span></div><div class="bar" style="--h:31%"><em>4</em><i></i><span>Nov</span></div><div class="bar" style="--h:15%"><em>2</em><i></i><span>Dec</span></div></div></div>
+  </div>
+  <div class="tbl-wrap">
+    <table class="tbl">
+      <thead><tr><th>Murdoch intake</th><th>Classes start</th><th>Early bird deadline</th><th>Open Days before it</th><th>Ads we saw (25 Nov)</th></tr></thead>
+      <tbody>
+        <tr><td><b>January 2027</b></td><td>11 Jan 2027</td><td>9 Nov 2026 (passed)</td><td>11 Dec, 8 Jan</td><td>Middlesex, De Montfort and Heriot-Watt run "January 2027 intake" ads, from Sep to Nov 2026. Murdoch's ads say "three intakes a year"</td></tr>
+        <tr><td><b>May 2027</b></td><td>3 May 2027</td><td>29 Mar 2027</td><td>5 Mar, 9 Apr</td><td>Too early to see; a window ACC could plan for now</td></tr>
+        <tr><td><b>September 2027</b></td><td>23 Aug 2027</td><td>19 Jul 2027</td><td>Not yet listed beyond 8 May</td><td>Murdoch's own Meta ads ran Aug to Nov 2026, which matches the August peak</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Brand comparison over the same period: "UOWD" averaged 34.9 and rose every year, "Middlesex University Dubai" 27.9, "Murdoch University Dubai" 6.7 and "Curtin University Dubai" 4.0. An acronym and full names are not like for like, and brand searches include current students, so treat these as direction, not market share. 2021 and 2026 are part years. Takeaway: family demand rises just before each intake, and peers name the intake in their ads. Murdoch's ads talk about intakes in general, and its brand searches dip in December, when the January decision is made.</p>
+
 
   <div class="subhead"><h3>Search: does Murdoch show up when families look?</h3><span>15 UAE queries, 25 Nov 2026</span></div>
   <div class="tbl-wrap">
@@ -455,13 +518,32 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
       <tbody>
         <tr><td><b>Google Maps</b></td><td class="me">4.3 stars, 211 reviews</td><td>Curtin 4.5 (236); Middlesex 4.3 (609); UOWD 4.2 (684); De Montfort 4.2 (215); Heriot-Watt 4.1 (529)</td><td>Strong rating, smallest review base. UOWD is the only campus that tags its Google profile link so profile visits show up separately in analytics. Owner replies to reviews: not verified.</td></tr>
         <tr><td><b>Edarabia</b></td><td class="me">4 / 5 from 58 reviews; "average fee AED 99,800"</td><td>UOWD 4.5 (196, avg AED 59,325); Middlesex 4 (73); Heriot-Watt 4 (40); Curtin 4.5 (19)</td><td>The headline "average fee" blends every programme including postgraduate, so Murdoch reads far above its AED 61,160 undergraduate fee next to UOWD.</td></tr>
-        <tr><td><b>Talem</b></td><td class="me">Fees shown AED 46,880 to 59,960</td><td>UOWD 63,449 to 68,909</td><td>Murdoch range looks like pre-2027 fees.</td></tr>
-        <tr><td><b>IDP, Bachelorsportal, Shiksha</b></td><td class="me">Listed with programme pages</td><td>Peers also listed</td><td>IDP shows the 2026 first-year fee (AED 59,960). Others not checked in detail.</td></tr>
+        <tr><td><b>Talem</b></td><td class="me">Fees shown AED 46,880 to 59,960; headline still says "Intake September 2026, Admission Open"</td><td>UOWD 63,449 to 68,909, headline January 2027</td><td>Murdoch shows 2026 fees and a past intake. See the agent channel table below.</td></tr>
+        <tr><td><b>IDP, Bachelorsportal, Shiksha</b></td><td class="me">Listed with programme pages</td><td>Peers also listed</td><td>IDP and Shiksha show 2026 level fees. See the agent channel table below.</td></tr>
         <tr><td><b>Reddit (r/dubai, r/UAEUniversities)</b></td><td class="me">Several threads, including "Middlesex or Murdoch university?"</td><td>Middlesex compared directly</td><td>Threads could not be opened without a browser. Search summaries describe mixed sentiment on value and careers support. Not verified.</td></tr>
         <tr><td><b>Directories and listicles</b></td><td class="me">localuae 4.2 (189); one listicle shows 3.9, fees AED 44,100 to 54,600</td><td></td><td>Stale numbers that still rank. One listing describes a 2,500 sq metre campus; your site says 4,650.</td></tr>
       </tbody>
     </table>
   </div>
+
+
+  <div class="subhead"><h3>Agent channel: how agents and listing sites present Murdoch</h3><span>Public pages, 25 Nov 2026. Official 2027 undergraduate fee: AED 61,160 a year</span></div>
+  <p class="sub" style="font-size:15.5px;margin-top:6px">Navitas reports that about 75% of its international placements come through agents, and Murdoch Dubai says it works with over 3,500 partner agents in more than 100 countries. These are the pages those agents and families read.</p>
+  <div class="tbl-wrap">
+    <table class="tbl">
+      <thead><tr><th>Site</th><th class="me">Murdoch: how it shows</th><th class="me">Murdoch fee shown</th><th>UOWD</th><th>Curtin</th></tr></thead>
+      <tbody>
+        <tr><td><b>IDP</b><br><span class="muted">course pages</span></td><td class="me">Listed, next intake 11 Jan 2027. Trimesters shown as January, May and "August". Location field says "Australia"</td><td class="me">AED 59,960 (labelled 2026)</td><td class="muted">Not verified (pages blocked)</td><td class="muted">Not verified</td></tr>
+        <tr><td><b>AECC</b><br><span class="muted">"Top 10 universities in Dubai", 15 Oct 2026</span></td><td class="me">Listed 9th of 10. Popular programmes include Forensics and Criminology (Criminology is a second major only). Merit scholarships 15% to 40%, correct</td><td class="me">AED 45,000 to 55,000</td><td>3rd; AED 58,000 to 65,000 (official 63,449, inside the range)</td><td>8th; AED 50,000 to 60,000 (official 60,900)</td></tr>
+        <tr><td><b>StudyIn (SI-UK)</b><br><span class="muted">"Best universities in the UAE", 26 Oct 2026; UAE office relaunched 17 Sep 2026</span></td><td class="me">Listed 7th of 10, "smaller class sizes", psychology, business and IT</td><td class="me">Not shown</td><td>3rd, "employability"</td><td>6th, "practical learning"</td></tr>
+        <tr><td><b>Global Admissions</b></td><td class="me">Bachelor of Business in Accounting, September 2027 deadline 1 Jul 2027. Marked "community contributed"</td><td class="me">AED 51,667 a year, about 15% below official</td><td class="muted">Not checked</td><td>BBA AED 60,900, matches official</td></tr>
+        <tr><td><b>Study From UAE</b><br><span class="muted">all three updated 18 Dec 2025</span></td><td class="me">Header says "Offering Scholarship: No". Founded 2007 (official 2008). Campus 2,500 sq m</td><td class="me">AED 40,000 to 60,000, and 59,960 in its FAQ</td><td>Same "Scholarship: No" header; BBA AED 60,429 (official 63,449)</td><td>Same header; fees shown "per semester"</td></tr>
+        <tr><td><b>Shiksha</b><br><span class="muted">aimed at Indian families</span></td><td class="me">4.6 from 3 reviews. Lists Murdoch courses as "B.E. / B.Tech" and a 48 month B.Sc</td><td class="me">AED 58,200 to 59,960</td><td class="muted">Not verified (blocked)</td><td class="muted">Not verified</td></tr>
+        <tr><td><b>Talem</b></td><td class="me">24 programmes. Headline "Intake September 2026, Admission Open"</td><td class="me">AED 59,960 a year; Foundation 46,880 (official 47,820)</td><td>AED 63,449 (current), headline "January 2027 Admission Open"</td><td class="muted">Not in its university list</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Takeaway: all seven sites list Murdoch, but none of the six that show a fee has the 2027 figure: they range from AED 45,000 to 59,960. Where we could compare, UOWD on Talem and Curtin on Global Admissions show current fees. In the two agent "top 10" guides Murdoch sits 9th and 7th, behind UOWD and Curtin. A low fee on a listing can look attractive, but it turns into a surprise at offer stage. The Agents' Portal is behind a login, so we could not see what partner agents receive today.</p>
 
   <div class="subhead"><h3>Organic: social, content and site health</h3><span>25 Nov 2026</span></div>
   <div class="tbl-wrap">
@@ -479,6 +561,36 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
   </div>
   <p class="note">Programme pages tested: Murdoch Marketing, UOWD BBA, Curtin BBA, Middlesex BA Business Management, De Montfort BA Business Management, Heriot-Watt BBA. Murdoch's Online Application page re-tested at 57 (10.4 s) on mobile. PageSpeed scores are lab results and move day to day. Facebook: UOWD about 284K and Middlesex about 126K (official pages); Murdoch about 49.6K (uniRank, June 2025); others not verified. TikTok follower counts are not verified. No campus has a full Arabic website; Middlesex is furthest along.</p>
 
+
+  <div class="subhead"><h3>Social content: what peers post</h3><span>Public YouTube feeds (15 most recent uploads each), X and ad libraries, 25 Nov 2026</span></div>
+  <div class="tbl-wrap">
+    <table class="tbl">
+      <thead><tr><th>Campus</th><th>Themes we saw</th><th>Formats</th><th>Timing of the 15 latest YouTube uploads</th></tr></thead>
+      <tbody>
+        <tr><td class="me"><b>Murdoch</b></td><td class="me">Student and parent testimonials, a "Sip and Speak" podcast series, a UAE student visa explainer, orientation recap, "From Africa to Dubai", a GEMS alumni story, an Iftar drive. Ads: scholarships up to 40%, three intakes</td><td class="me">Testimonial video, podcast, explainer. X dormant since Aug 2023</td><td class="me">17 Nov 2025 to 10 Nov 2026 (about one a month)</td></tr>
+        <tr><td><b>Middlesex</b></td><td>Virtual open days by country (Pakistan, Africa), nationality student stories, Winter Camp, graduation, QS fair. Ads: "January 2027 intake", MBA</td><td>Live virtual sessions, short video, heavy video ads, Arabic posts on X</td><td>23 Oct to 24 Nov 2026</td></tr>
+        <tr><td><b>Curtin</b></td><td>Scholarship recipient journeys, "Meet" student intros by programme, Open Day, Career Expo, graduation. Ads: 2027 early bird bursary, Master's in AI</td><td>Student profile video, event recap</td><td>7 Sep to 12 Nov 2026</td></tr>
+        <tr><td><b>Heriot-Watt</b></td><td>One explainer per programme, faculty commentary on X. Ads: "January 2027 intake", a Diwali scholarship award</td><td>Programme explainer, carousel and video ads</td><td>22 Apr to 10 Aug 2026</td></tr>
+        <tr><td><b>UOWD</b></td><td>Campus life, festivals, careers fair and graduation on X; thought leadership talks on YouTube. Ads: IELTS centre, Master of International Business</td><td>Event posts, talks, graduation streams</td><td>19 Dec 2024 to 1 Jun 2026 (most activity is on other channels)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Takeaway: Murdoch already makes the right kind of content for parents (a parent testimonial, a visa explainer, an Africa story), and its YouTube channel is the largest in the set. Its upload pace is about one a month, while Middlesex posted 15 in a month, much of it aimed at named countries. Cutting existing testimonials into short intake clips is a quick win. We list themes and dates only; we did not measure engagement.</p>
+
+  <div class="subhead"><h3>Arabic and expat community view</h3><span>Sitemaps and public pages, 25 Nov 2026</span></div>
+  <div class="tbl-wrap">
+    <table class="tbl">
+      <thead><tr><th>Campus</th><th>Arabic on the website</th><th>Indian, Pakistani and African families</th></tr></thead>
+      <tbody>
+        <tr><td class="me"><b>Murdoch</b></td><td class="me">None. Site language is English (Australia); no Arabic URL in 154 sitemap URLs</td><td class="me">Entry rules cover CBSE, ICSE, Pakistani, Nigerian (WAEC), Kenyan, South African, Egyptian and Saudi curricula. Videos include "From Africa to Dubai" and a parent testimonial. No country or community page in the sitemap</td></tr>
+        <tr><td><b>UOWD</b></td><td>Arabic language control on the homepage; no Arabic URLs found in 2,355</td><td>News on scholarships for CBSE top scorers, a Bangladesh student club and Emirati culture events (55 India, 10 Pakistan and 14 Africa related URLs, mostly news)</td></tr>
+        <tr><td><b>Curtin</b></td><td>None found</td><td>An Indian schools tag and CBSE grant posts; 4 India related URLs</td></tr>
+        <tr><td><b>Middlesex</b></td><td>7 Arabic pages (UAE, GCC, Levant, India, postgraduate and more) plus Arabic posts on X</td><td>A CBSE results page, a regional office for the Middle East, Africa and Pakistan, Pakistan virtual open days, Africa sessions, fairs in Kenya and India (103 India, 32 Pakistan and 48 Africa related URLs)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Arabic ads: not verified; the ad library screens we saw were in English. Arabic posts on Instagram and Facebook were not checked. URL counts include old news and events, so they show effort, not quality. De Montfort had no Arabic site on its Dubai pages; Heriot-Watt was not checked. Takeaway: Murdoch already has the proof points these families look for, in its entry rules and its videos, but no page greets them by name and there is no Arabic page for parents. A single Arabic parent page (fees, scholarships, the Esaad 20% discount, visas, WhatsApp) and three community pages (Indian curricula, Pakistan, Africa) would close most of this gap.</p>
+
   <div class="subhead"><h3>Tracking and consent</h3><span>Read from public tag containers, 25 Nov 2026</span></div>
   <div class="tbl-wrap">
     <table class="tbl">
@@ -495,13 +607,16 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
   </div>
   <p class="note">A tag in a container does not prove it fires, or that it waits for consent. Firing order, form-success conversions and enhanced conversions need a browser session to verify, and we have not claimed them.</p>
 
-  <div class="subhead"><h3>Five plain takeaways</h3></div>
+  <div class="subhead"><h3>Eight plain takeaways</h3></div>
   <div class="take">
     <div class="card"><h3>1. LinkedIn is the clearest paid gap</h3><p>No LinkedIn ads were found for Murdoch, and no LinkedIn Insight tag is installed, so no LinkedIn audience can build. UOWD, Middlesex and Heriot-Watt all have large all-time libraries. Those counts are not UAE-only, so this is a presence gap, not a spend ranking.</p></div>
     <div class="card"><h3>2. Google volume is far below the leaders</h3><p>61 Murdoch ads against about 300 for Curtin and about 400 for Middlesex (both run through operator or agency accounts). This compares volume and coverage, not lead quality.</p></div>
     <div class="card"><h3>3. Ads promise what search does not show</h3><p>Murdoch's ads lead on "affordable", "three intakes" and "scholarships". When families search those exact topics, Murdoch did not appear, while Middlesex and Heriot-Watt own January intake pages.</p></div>
     <div class="card"><h3>4. Reputation is good but thin</h3><p>A 4.3 Google rating on the smallest review base of the six, and third-party sites showing old fees or a misleading average. A steady review request flow and listing corrections are low-effort wins.</p></div>
     <div class="card"><h3>5. Fast front door, slow inner rooms</h3><p>The best mobile homepage in the set, but the Online Application page (10.4 s) and marketing degree page (9.6 s) are slow on mobile, right where high-intent families land from ads.</p></div>
+    <div class="card"><h3>6. Agents see an old Murdoch</h3><p>Every agent and listing site we checked lists Murdoch, but none shows the 2027 fee, and some show a past intake or say there are no scholarships. With most placements coming through agents, a per-intake agent update is cheap and fast.</p></div>
+    <div class="card"><h3>7. Demand peaks right before each intake</h3><p>UAE searches for "university in dubai" peak in January, August and May. Peers name the January 2027 intake in their ads now; Murdoch's ads talk about three intakes in general.</p></div>
+    <div class="card"><h3>8. Communities are not greeted by name</h3><p>Middlesex runs Arabic pages and country editions for Pakistan and Africa. Murdoch has the content to do the same but no Arabic parent page and no community pages.</p></div>
   </div>
 </div></section>
 
@@ -553,7 +668,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
 
 <section id="priorities"><div class="wrap">
   <div class="sec-head"><span class="sec-num">08</span><span class="kick">Gaps ranked by leverage</span></div>
-  <h2>Eight priorities, ordered by enrolment impact against effort.</h2>
+  <h2>Nine priorities, ordered by enrolment impact against effort.</h2>
   <p class="sub">Quick infrastructure wins first, so leads already reaching your site are captured before more is spent on traffic. Then the visibility work that brings more families to the front door.</p>
   <div class="prio">
     <div class="p-item top"><div class="p-num">1</div><div>
@@ -561,7 +676,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
       <div class="p-meta"><span class="p-badge hi">Impact: High</span><span class="p-badge">Effort: Medium</span></div>
       <div class="p-cols">
         <div><strong>What it is</strong>No visible confirmation on Contact Us, no email received overnight, and no public WhatsApp or live chat despite collecting WhatsApp consent.</div>
-        <div><strong>Why it matters</strong>Three peers emailed in 0 to 14 minutes, yet none called or used WhatsApp in ~16.5 hours. An instant parent and student reply on WhatsApp and email would put Murdoch first on this measure.</div>
+        <div><strong>Why it matters</strong>Three peers emailed in 0 to 14 minutes, yet none had called or used WhatsApp about 22 hours later. An instant parent and student reply on WhatsApp and email would put Murdoch first on this measure.</div>
         <div><strong>What we would do</strong>Fix form confirmation, add a consented WhatsApp entry point synced to Marketo or the CRM, and run instant parent vs student welcome sequences.</div>
       </div></div></div>
     <div class="p-item top"><div class="p-num">2</div><div>
@@ -608,7 +723,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
       <h3>Google reviews and third-party listings</h3>
       <div class="p-meta"><span class="p-badge">Impact: Medium</span><span class="p-badge">Effort: Low</span></div>
       <div class="p-cols">
-        <div><strong>What it is</strong>211 Google reviews, the fewest of six campuses. Edarabia shows an "average fee" of AED 99,800, Talem shows pre-2027 fees, and older directories still show 3.9 stars and outdated fees. The Google profile link is not tagged for analytics.</div>
+        <div><strong>What it is</strong>211 Google reviews, the fewest of six campuses. Edarabia shows an "average fee" of AED 99,800, Talem shows a past intake and 2026 fees, and older directories still show 3.9 stars and outdated fees. The Google profile link is not tagged for analytics.</div>
         <div><strong>Why it matters</strong>Parents compare on these pages before they ever enquire, and AI assistants read them too.</div>
         <div><strong>What we would do</strong>Add a post-orientation and post-graduation review request, reply to reviews, tag the Google profile link, and request fee and fact corrections on the main listing sites.</div>
       </div></div></div>
@@ -620,22 +735,131 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
         <div><strong>Why it matters</strong>Dead dates hurt trust and corrupt intake reporting. Slow apply and programme pages leak families who arrive from paid ads.</div>
         <div><strong>What we would do</strong>Automate upcoming intake and event picklists, add the Student / Parent / Agent selector, and optimise image and script loading on Apply and key programme pages.</div>
       </div></div></div>
+    <div class="p-item"><div class="p-num">9</div><div>
+      <h3>Agent and counsellor channel</h3>
+      <div class="p-meta"><span class="p-badge hi">Impact: Medium to High</span><span class="p-badge">Effort: Medium</span></div>
+      <div class="p-cols">
+        <div><strong>What it is</strong>Agent and listing sites show Murdoch fees from AED 45,000 to 59,960 against the official 61,160, and the agent "top 10" guides place Murdoch 9th and 7th. What partner agents receive today sits behind a login.</div>
+        <div><strong>Why it matters</strong>Navitas reports about 75% of placements through agents. School and IB counsellors shape the shortlist before a family ever searches.</div>
+        <div><strong>What we would do</strong>A regular agent update for each intake (dates, deadlines, scholarships, fees, Open Days), plus LinkedIn and email outreach run by ACC to agents and UAE school counsellors, inside Navitas agent rules.</div>
+      </div></div></div>
+  </div>
+</div></section>
+
+<section id="work" class="tint"><div class="wrap">
+  <div class="sec-head"><span class="sec-num">09</span><span class="kick">How we would work with Navitas</span></div>
+  <h2>Inside your tools and brand rules, starting with what the campus controls.</h2>
+  <p class="sub">Ruben runs every client himself, backed by AI agents for research, tracking checks, drafting and reporting. Nothing goes live without your approval.</p>
+  <div class="g2" style="margin-top:26px">
+    <div class="card">
+      <span class="tag">Governance</span>
+      <h3>Who owns what</h3>
+      <ul class="tick" style="margin-top:6px">
+        <li style="font-size:14.5px">Chantel leads campus marketing. Navitas group sets the brand, the technology (including Marketo) and the agent rules.</li>
+        <li style="font-size:14.5px">We work inside your Marketo, CRM, ad accounts and brand guidelines, with access you grant and can remove.</li>
+        <li style="font-size:14.5px">We start with what the campus controls locally: thank-you pages, reply messages, WhatsApp, local ads, listings, reviews and content.</li>
+        <li style="font-size:14.5px">Group-level changes (new Marketo fields, CRM, tag manager) go in as change requests we draft for your central teams.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="tag">Compliance</span>
+      <h3>Claims, data and consent</h3>
+      <ul class="tick" style="margin-top:6px">
+        <li style="font-size:14.5px">Accreditation, KHDA rating and ranking claims use current official wording and dates. For example, the KHDA 5 star rating is from the 2022 cycle, so we label it that way.</li>
+        <li style="font-size:14.5px">Personal data handled under the UAE data protection law (Federal Decree-Law No. 45 of 2021) and the Navitas privacy policy, and kept in your systems.</li>
+        <li style="font-size:14.5px">WhatsApp only for people who opted in on your form, which already has a WhatsApp consent field. Opt-out honoured, templates approved by Meta, and TrustArc consent respected.</li>
+        <li style="font-size:14.5px">Students under 18: parent-first messaging.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="g2" style="margin-top:18px">
+    <div class="card">
+      <span class="tag">Success measures to agree</span>
+      <h3>What we would report on</h3>
+      <ul class="tick" style="margin-top:6px">
+        <li style="font-size:14.5px">Enquiry to application to enrolment, for each intake</li>
+        <li style="font-size:14.5px">Time to first reply, and the share of enquiries reached on WhatsApp</li>
+        <li style="font-size:14.5px">Open Day registrations to attendance</li>
+        <li style="font-size:14.5px">Cost per enrolled student, by channel</li>
+        <li style="font-size:14.5px">Agent and direct mix of applications and enrolments</li>
+      </ul>
+      <p style="margin-top:10px">Targets are set with you after we have a baseline. We do not promise enrolment numbers.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Pilot</span>
+      <h3>60 to 90 days: speed to lead and WhatsApp</h3>
+      <p>Starting after sign-off in December, the pilot covers late applicants for January 2027 and the May 2027 intake (early bird deadline 29 Mar, classes 3 May).</p>
+      <ul class="tick" style="margin-top:8px">
+        <li style="font-size:14.5px">Weeks 1 and 2: baseline from Marketo and the CRM, form confirmations fixed, reply templates approved.</li>
+        <li style="font-size:14.5px">From week 3: instant email plus consented WhatsApp replies for parents and students, Open Day reminders and callback booking.</li>
+        <li style="font-size:14.5px">Day 45 and day 90: readout against the baseline, then a decision on scope.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card" style="margin-top:18px">
+    <span class="tag">Agent and counsellor channel</span>
+    <h3>LinkedIn and email outreach run by ACC</h3>
+    <div class="g3" style="margin-top:10px">
+      <div><p><b style="color:var(--k)">Who.</b> Education agents already in Murdoch's network in the UAE and the feeder markets you choose, plus school, IB and careers counsellors in UAE schools. New agents only through Navitas due diligence.</p></div>
+      <div><p><b style="color:var(--k)">How.</b> A personal LinkedIn connection and message, paired with a short email sequence, to build and nurture relationships. Every email carries an opt-out.</p></div>
+      <div><p><b style="color:var(--k)">What they get.</b> A regular agent update for each intake: dates, deadlines, scholarships, fees and Open Days, matching your official pages. The same pack goes to listing sites to fix wrong fees.</p></div>
+    </div>
+    <p style="margin-top:12px;font-size:14px">We would track replies, meetings and agent applications by source in your systems. Results depend on agents and counsellors, so we report activity and pipeline, not promises.</p>
+  </div>
+</div></section>
+
+<section id="roadmap"><div class="wrap">
+  <div class="sec-head"><span class="sec-num">10</span><span class="kick">90-day roadmap</span></div>
+  <h2>Twelve weeks, mapped to the ranked gaps.</h2>
+  <p class="sub">Numbers in grey refer to the priorities in section 08. Speed to lead and WhatsApp come first because they cost the least and every channel feeds them.</p>
+  <div class="road">
+    <div class="phase">
+      <div class="wk">Weeks 1 to 4</div>
+      <h3>Fix the front door</h3>
+      <ul>
+        <li><b>Speed to lead and WhatsApp:</b> contact form confirmation, instant email, consented WhatsApp reply, Open Day reminders<small>P1</small></li>
+        <li><b>CRM opportunity fields:</b> enquirer type, number of students, grade, intake and source agreed and mapped<small>P2</small></li>
+        <li><b>Form hygiene:</b> past dates removed, Student / Parent / Agent selector, parent course capture<small>P8</small></li>
+        <li><b>Listings:</b> 2027 fees, intakes and scholarships sent to IDP, AECC, Global Admissions, Study From UAE, Shiksha, Talem and Edarabia<small>P7</small></li>
+        <li><b>Baseline:</b> reply times and conversion per intake</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="wk">Weeks 5 to 8</div>
+      <h3>Capture and reach</h3>
+      <ul>
+        <li><b>Tour and callback booking</b> on thank-you pages<small>P3</small></li>
+        <li><b>Paid:</b> May 2027 campaigns that name the intake and Open Days on Google and Meta; LinkedIn tag and first campaign where approved<small>P5</small></li>
+        <li><b>Agent outreach:</b> first agent update out, LinkedIn and email outreach to agents and counsellors starts<small>P9</small></li>
+        <li><b>Reviews:</b> request flow after orientation and graduation, Google profile link tagged<small>P7</small></li>
+        <li><b>Fee calculator</b> "send me this" capture<small>P6</small></li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="wk">Weeks 9 to 12</div>
+      <h3>Be the answer</h3>
+      <ul>
+        <li><b>AI visibility content:</b> intake, fees, scholarships and subject pages (business, psychology, cyber) with FAQs and structured data<small>P4</small></li>
+        <li><b>Communities:</b> Arabic parent page and Indian, Pakistani and African community pages, if approved<small>P4</small></li>
+        <li><b>Page speed</b> on the Online Application and key programme pages<small>P8</small></li>
+        <li><b>Pilot readout at day 90</b> and the plan for September 2027, whose demand peaks in August</li>
+      </ul>
+    </div>
   </div>
 </div></section>
 
 <section class="band" id="next"><div class="wrap cta">
   <div>
-    <div class="sec-head"><span class="sec-num">09</span><span class="kick">How ACC works and next steps</span></div>
+    <div class="sec-head"><span class="sec-num">11</span><span class="kick">Next steps</span></div>
     <h2>One partner from organic to paid, ready to walk through on 8 December.</h2>
     <p class="sub" style="margin-top:8px">Ads Creation Centre handles your online marketing infrastructure from organic visibility and AI search to paid campaigns, landing flows and CRM automation.</p>
     <ul class="tick" style="margin-top:14px">
       <li><b>8 December meeting:</b> walk through refreshed mystery-shop results and this audit, and align on CRM ownership and opportunity fields.</li>
-      <li><b>Week 1 after sign-off:</b> fix Marketo form confirmations, stale dates, parent course capture, and thank-you page tour and WhatsApp routing.</li>
-      <li><b>Weeks 2 to 4:</b> consented WhatsApp and email sequences for parents and students, fee calculator capture, clean conversion tracking, and LinkedIn and TikTok tags where approved.</li>
-      <li><b>Weeks 4 to 8:</b> intake, scholarship and subject pages, review request flow and listing corrections, and a paid coverage plan for Google and LinkedIn.</li>
-      <li><b>Ongoing:</b> weekly reporting on enquiries, response speed, tour bookings and pipeline by channel, with everything staged for your approval before going live.</li>
+      <li><b>Agree the pilot:</b> scope, success measures, and which tools and accounts we work inside.</li>
+      <li><b>Access and approvals:</b> who signs off messages, ads and listing updates, locally and at group level.</li>
+      <li><b>Then the 90-day roadmap:</b> weekly reporting on enquiries, reply speed, tour bookings and pipeline by channel, with everything staged for your approval.</li>
     </ul>
-    <p style="font-size:14.5px;margin-top:14px;font-weight:600">What we guarantee is what we control: clean CRM data, instant responses, verified tracking and weekly reporting. Enrolment numbers remain a joint admissions and marketing effort.</p>
+    <p style="font-size:14.5px;margin-top:14px;font-weight:600">What we commit to is what we control: clean CRM data, instant responses, verified tracking and weekly reporting. Enrolment numbers remain a joint admissions and marketing effort.</p>
   </div>
   <div class="ruben">
     <img src="acc-logo.jpg" alt="Ads Creation Centre" style="width:80px;height:80px;border-radius:12px;margin-bottom:14px">
@@ -653,12 +877,12 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
 <!-- === MYSTERY SHOP DATA: UPDATE THIS JSON BLOCK BEFORE THE 8 DECEMBER MEETING === -->
 <script id="mystery-shop-data" type="application/json">
 {
-  "windowNote": "Mystery-shop window: 24 November to early December 2026 (initial submissions 24 Nov ~17:35 to 17:50 SAST / 19:35 to 19:50 UAE; inbox check 25 Nov ~09:15 SAST / 11:15 UAE; phone/WhatsApp check 25 Nov ~10:20 SAST / 12:20 UAE). Individual staff names omitted. Refresh before the 8 December meeting.",
+  "windowNote": "Mystery-shop window: 24 November to early December 2026 (initial submissions 24 Nov ~17:35 to 17:50 SAST / 19:35 to 19:50 UAE; inbox check 25 Nov ~09:15 SAST / 11:15 UAE; phone/WhatsApp check 25 Nov ~10:20 SAST / 12:20 UAE; no calls or WhatsApps confirmed as of 25 Nov ~16:06 SAST / 18:06 UAE, about 22 hours). Individual staff names omitted. Refresh before the 8 December meeting.",
   "rows": [
     {
       "campus": "Murdoch University Dubai",
       "submitted": "24 Nov, ~19:35 UAE (~17:35 SAST)",
-      "speed": "No email by 11:15 UAE (25 Nov); no call/WhatsApp in ~16.5 h",
+      "speed": "No email by 11:15 UAE (25 Nov); no call/WhatsApp as of 25 Nov afternoon (~22 h)",
       "speedBadge": "gap",
       "confirmation": "None shown (0, 1 or 2 submits uncertain)",
       "personalisation": "None received yet",
@@ -668,7 +892,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
     {
       "campus": "University of Wollongong in Dubai",
       "submitted": "24 Nov, ~19:38 UAE (~17:38 SAST)",
-      "speed": "Email in ~14 min (19:52 UAE); no call/WhatsApp in ~16.5 h",
+      "speed": "Email in ~14 min (19:52 UAE); no call/WhatsApp as of 25 Nov afternoon (~22 h)",
       "speedBadge": "ok",
       "confirmation": "Thank-you page (2-working-day SLA)",
       "personalisation": "Advisor email, \"Dear Ruben\", named Bachelor of Business: Management",
@@ -678,7 +902,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
     {
       "campus": "Curtin University Dubai",
       "submitted": "24 Nov, 19:40 UAE (17:40 SAST)",
-      "speed": "Auto email in ~1 min (19:41 UAE); no call/WhatsApp in ~16.5 h",
+      "speed": "Auto email in ~1 min (19:41 UAE); no call/WhatsApp as of 25 Nov afternoon (~22 h)",
       "speedBadge": "ok",
       "confirmation": "Thank-you page (assigned admissions officer)",
       "personalisation": "\"Dear Ruben Venter\", named an assigned admissions officer",
@@ -688,7 +912,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
     {
       "campus": "Heriot-Watt University Dubai",
       "submitted": "24 Nov, ~19:42 UAE (~17:42 SAST)",
-      "speed": "Auto email same minute (19:41 UAE); no call/WhatsApp in ~16.5 h",
+      "speed": "Auto email same minute (19:41 UAE); no call/WhatsApp as of 25 Nov afternoon (~22 h)",
       "speedBadge": "warn",
       "confirmation": "In-place text (\"confirmation email shortly\")",
       "personalisation": "Opened \"Dear ,\" with blank first name",
@@ -698,7 +922,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px;color:var(
     {
       "campus": "Middlesex University Dubai",
       "submitted": "24 Nov, ~19:50 UAE (~17:50 SAST)",
-      "speed": "No email by 11:15 UAE (25 Nov); no call/WhatsApp in ~16.5 h",
+      "speed": "No email by 11:15 UAE (25 Nov); no call/WhatsApp as of 25 Nov afternoon (~22 h)",
       "speedBadge": "gap",
       "confirmation": "None shown (delivery unknown)",
       "personalisation": "None received yet",
