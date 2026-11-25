@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Google review link preview | ClinoTrend</title>
+<link rel="icon" href="/clinotrend/content-preview/review-link/site/favicon-48x48.png">
+<style>
+:root{--forest:#0f3d2e;--mint:#2bb673;--mint50:#ecf8f1;--ink:#24443a;--amber:#fff4d6;--line:#dde7e2}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#f6f8f7}
+header{background:var(--forest);color:#fff;padding:28px 20px 24px}
+.wrap{max-width:1180px;margin:0 auto}
+header img{height:40px;background:#fff;border-radius:8px;padding:4px 8px}
+h1{font-size:28px;line-height:1.2;margin:16px 0 8px}
+header p{margin:0;color:#d8efe3;max-width:820px}
+main{padding:24px 20px 50px}
+h2{font-size:22px;color:var(--forest);margin:0 0 10px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin-bottom:20px}
+.card ul{margin:0;padding-left:20px}
+.card li{margin:6px 0}
+.note{background:var(--amber);border-radius:12px;padding:10px 14px;margin-top:14px;font-size:14px;color:#4a3a10}
+.btn{display:inline-block;background:var(--mint);color:#fff;text-decoration:none;font-weight:600;padding:8px 14px;border-radius:10px;font-size:14px}
+.btn.alt{background:#fff;color:var(--forest);border:2px solid var(--forest)}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6b8078}
+footer{text-align:center;font-size:13px;color:#6b8078;padding:0 20px 40px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <img src="/clinotrend/content-preview/review-link/site/logo.png" alt="ClinoTrend Health and Aviation">
+    <h1>Google review link rollout, for review</h1>
+    <p>Adds a quiet "Leave us a Google review" link to the site footer and the booking confirmation page, and points /review/ to the direct Google review URL. Preview only: nothing here has been uploaded to cPanel.</p>
+  </div>
+</header>
+<main class="wrap">
+  <section class="card">
+    <h2>What changed</h2>
+    <ul>
+      <li><strong>Footer (every page):</strong> quiet "Leave us a Google review" link in the right column under Booking terms, opening <code>https://g.page/r/CTBrstEhfgm5EBM/review</code>.</li>
+      <li><strong>Booking confirmation (/booking-confirmed/):</strong> quiet "Visited us recently? Leave us a Google review" line under the contact buttons.</li>
+      <li><strong>/review/ redirect:</strong> updated to redirect straight to <code>https://g.page/r/CTBrstEhfgm5EBM/review</code>.</li>
+    </ul>
+    <p class="note">This preview is noindex. Live hosting on cPanel has not been changed; the production delta zip is ready for upload.</p>
+  </section>
+  <section class="card">
+    <h2>Pages to inspect</h2>
+    <table>
+      <thead><tr><th>Page</th><th>Desktop</th><th>Phone view</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Home page (check footer)</td>
+          <td><a class="btn" href="/clinotrend/content-preview/review-link/site/">Open</a></td>
+          <td><a class="btn alt" href="/clinotrend/content-preview/review-link/phone.html?u=/clinotrend/content-preview/review-link/site/">Phone view</a></td>
+        </tr>
+        <tr>
+          <td>Booking confirmation (/booking-confirmed/)</td>
+          <td><a class="btn" href="/clinotrend/content-preview/review-link/site/booking-confirmed/">Open</a></td>
+          <td><a class="btn alt" href="/clinotrend/content-preview/review-link/phone.html?u=/clinotrend/content-preview/review-link/site/booking-confirmed/">Phone view</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+<footer>Preview only. Not for indexing. Nothing here is on clinotrend-health.co.za.</footer>
+</body>
+</html>
