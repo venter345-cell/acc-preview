@@ -175,6 +175,20 @@ footer{padding:36px 0;border-top:1px solid var(--line);font-size:13px;color:var(
 .ai-shots figure{margin:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--w)}
 .ai-shots img{width:100%;height:auto;display:block}
 .ai-shots figcaption{font-size:13px;color:var(--mut);padding:12px 16px;border-top:1px solid var(--line)}
+
+.qlabel{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;background:var(--y);color:var(--k);padding:2px 7px;border-radius:999px;margin-left:8px;vertical-align:1px;white-space:nowrap}
+.qlist{list-style:none;margin:14px 0 0;padding:0}
+.qlist li{display:grid;grid-template-columns:28px 1fr;gap:12px;padding:11px 0;border-top:1px solid var(--line);align-items:start}
+.qlist li:first-child{border-top:0;padding-top:0}
+.qlist i{font-style:normal;font-family:var(--h);font-weight:800;color:var(--k);width:28px;height:28px;border-radius:50%;background:var(--y);display:grid;place-items:center;font-size:13px;margin-top:1px}
+.qlist b{color:var(--k);font-size:15.5px}
+.qlist span{display:block;font-size:13.5px;color:var(--mut);margin-top:2px;font-weight:400}
+.roll{margin-top:10px;padding:16px 0;border-top:1px solid var(--line)}
+.roll:first-of-type{border-top:0;padding-top:0}
+.roll h4{font-size:16.5px;margin-bottom:4px}
+.roll p{font-size:14.5px;color:var(--mut)}
+@media(max-width:620px){.qlist b{font-size:15px}.qlabel{display:block;margin:6px 0 0;width:fit-content}}
+
 @media(max-width:980px){.ai-shots{grid-template-columns:1fr}}
 
 </style>
@@ -449,13 +463,50 @@ footer{padding:36px 0;border-top:1px solid var(--line);font-size:13px;color:var(
   <span class="kick">The WhatsApp flow</span>
   <h2>Turn every WhatsApp chat into a qualified Odoo lead, automatically.</h2>
   <p class="sub">Your WhatsApp chats already flow into Odoo through our automation. The next step is to make every chat ask the right questions, sort itself, reach the right person and follow up, day or night.</p>
+
+  <div class="dcard" id="qualify" style="margin-top:28px;padding:28px">
+    <h3 style="font-size:clamp(22px,2.4vw,28px)">Qualify every WhatsApp lead, day or night.</h3>
+    <p style="color:var(--mut);margin-top:10px;max-width:820px">Today, 30% of your chats arrive after hours or on a Sunday (166 of 546). Since February, every lead left only a business name. We can start qualifying those chats on the tool you already use, then add an assistant inside WhatsApp.</p>
+    <div class="g2" style="margin-top:22px;align-items:start;gap:28px">
+      <div>
+        <h3 style="font-size:18px">The 8 questions we would ask</h3>
+        <ol class="qlist">
+          <li><i>1</i><div><b>What do you need? <em class="qlabel">Need</em></b><span>E-commerce or packshots, ghost mannequin or on-model, jewellery or 360, video or UGC, or other.</span></div></li>
+          <li><i>2</i><div><b>What does your brand sell? <em class="qlabel">Need</em></b><span>A short line on the products or category, so the team knows the brief.</span></div></li>
+          <li><i>3</i><div><b>About how many products or SKUs? <em class="qlabel">Budget signal</em></b><span>1 to 10, 11 to 50, 51 to 200, 200+, or not sure yet.</span></div></li>
+          <li><i>4</i><div><b>Where will the images be used? <em class="qlabel">Budget signal</em></b><span>Amazon, Noon, your own website, several of these, or other.</span></div></li>
+          <li><i>5</i><div><b>When do you need the first images? <em class="qlabel">Timing</em></b><span>This week, this month, in 1 to 3 months, or just researching.</span></div></li>
+          <li><i>6</i><div><b>What is your role? <em class="qlabel">Authority</em></b><span>Owner or founder, marketing or e-commerce manager, assistant or coordinator, buying for a client, or other.</span></div></li>
+          <li><i>7</i><div><b>Company or brand name</b><span>The name you already collect today, kept as a required field.</span></div></li>
+          <li><i>8</i><div><b>Work email</b><span>So the quote can go to the right inbox, not only into the chat.</span></div></li>
+        </ol>
+      </div>
+      <div>
+        <h3 style="font-size:18px">How we would score each lead</h3>
+        <ul class="tick" style="margin-top:12px">
+          <li><b>Hot:</b> a UAE or GCC brand that needs a clear service this week or this month, with a strong volume or marketplace signal. Your sales team is alerted at once.</li>
+          <li><b>Warm:</b> complete answers, a real company and email, needed in 1 to 3 months or still researching. Followed up in normal hours.</li>
+          <li><b>Cold:</b> a junk name, a job enquiry, or a chat that is clearly not for a Dubai shoot. A polite reply, kept out of the urgent queue.</li>
+        </ul>
+        <h3 style="font-size:18px;margin-top:22px">How we would start</h3>
+        <div class="roll">
+          <h4>Step 1, now, on the tool you already use</h4>
+          <p>A short form before the chat starts, an after-hours message so late and Sunday chats get a reply, the answers written into Odoo, and an alert when a lead is hot.</p>
+        </div>
+        <div class="roll">
+          <h4>Step 2, an AI assistant inside WhatsApp</h4>
+          <p>Once the WhatsApp Business API is connected, people who write freely still get a fast, useful reply and the same questions, then a person on your team takes over.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div></section>
 
 <section style="padding-top:40px;border-top:0"><div class="wrap">
   <div class="flow">
     <div class="step"><h3>Click</h3><p>A buyer taps WhatsApp on any page. We capture the page, the ad or search that brought them and the country.</p></div>
     <div class="step"><h3>Instant reply</h3><p>Within seconds, a warm WhatsApp reply in your voice, in English or Arabic, any time of day. Office hours show if it is after 6 pm.</p></div>
-    <div class="step"><h3>4 quick questions</h3><p>Tap to answer: what to shoot, how many products, where they sell, when they need it. Plus a budget range and their company email.</p></div>
+    <div class="step"><h3>8 short questions</h3><p>What to shoot, what the brand sells, how many products, where they sell, when they need it, their role, company name and work email.</p></div>
     <div class="step"><h3>Odoo lead, filled in</h3><p>Contact and lead created in Odoo with proper fields: service, SKU count, channels, timeline, budget, source, campaign and country.</p></div>
     <div class="step"><h3>Score and route</h3><p>Each lead gets a score. Hot leads go straight to the right person, by service. Out-of-market chats get a kind reply and a separate stage.</p></div>
     <div class="step"><h3>Alert</h3><p>Your team gets a WhatsApp or Odoo alert for hot leads, with the summary, so nobody has to scroll a chat to understand it.</p></div>
