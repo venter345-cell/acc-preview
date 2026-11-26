@@ -1,1 +1,0 @@
-import{j as o}from"./index-CnEydA_s.js";import{Toaster as r}from"./index-Bu5Qs44L.js";function a(){return o.jsx(r,{position:"top-right",toastOptions:{style:{background:"#0B1E1C",border:"1px solid rgba(255,255,255,0.1)",color:"#fff"}}})}export{a as default};
